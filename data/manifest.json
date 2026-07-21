@@ -79,7 +79,7 @@
      "adversarial": "redteam_high",
      "k19_nla": false,
      "k19_nla_domain": false,
-     "k19_jlens": false,
+     "k19_jlens": true,
      "k19_blackbox": true,
      "jlens_label": "trace",
      "prompts": [
