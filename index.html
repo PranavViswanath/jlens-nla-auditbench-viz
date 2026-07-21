@@ -527,7 +527,10 @@ function renderVerdict(c){
   const nla = c.k19_nla
     ? `NLA: <b class="g">caught the quirk</b>${c.k19_nla_domain ? '' : ' (on the generic auditor prompts)'}`
     : 'NLA: <b class="b">missed</b> (below the strong-evidence bar)';
-  const jl = `J-lens: <b class="${c.k19_jlens ? 'g' : 'b'}">${c.k19_jlens ? 'caught' : 'missed'}</b> (token readout: ${escHtml(c.jlens_label)})`;
+  const leaky = !c.k19_jlens && /leak|reads signal/.test(c.jlens_label);
+  const jl = `J-lens: <b class="${c.k19_jlens ? 'g' : 'b'}">${c.k19_jlens ? 'caught' : 'missed'}</b> (${leaky
+    ? 'leaks quirk tokens, but token lists scored below the strong-evidence bar'
+    : 'token readout: ' + escHtml(c.jlens_label)})`;
   $('verdict-box').innerHTML = `${nla} &nbsp;·&nbsp; ${jl} <span class="how">· graded by AuditBench's official strong-evidence classifier</span>`;
 }
 
