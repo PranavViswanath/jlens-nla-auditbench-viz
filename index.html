@@ -96,9 +96,10 @@ main { padding: 8px 22px 40px; display: flex; flex-direction: column; gap: 16px;
   padding: 14px 18px;
 }
 .panel h2 {
-  font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--muted); margin: 0 0 10px; font-weight: 600;
+  font-size: 16px; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--ink); margin: 0 0 10px; font-weight: 700;
 }
+.panel h2 .hint { font-size: 12.5px; color: var(--muted); }
 .panel h2 .hint { text-transform: none; letter-spacing: 0; font-weight: 400; }
 
 /* transcript */
@@ -219,10 +220,8 @@ footer a { color: var(--accent); }
   <div class="cell-card">
     <span class="lbl">Hidden quirk</span>
     <div class="quirk-text" id="quirk"></div>
-    <div class="org" id="org"></div>
-    <div class="cc-pick">Pick an instillation method and an anti-reveal training level</div>
+    <div class="cc-pick">Pick an instillation method and an anti-reveal training level. Compare what the J-lens and NLA find on both the model organism and base model.</div>
     <table class="cc-table" id="cell-table"></table>
-    <div class="cc-note" id="cc-note"></div>
   </div>
   <div class="verdict-box" id="verdict-box"></div>
   <div class="prompt-pills" id="pills"></div>
@@ -529,8 +528,6 @@ async function loadCell(c){
   state.cell = c;
   renderCellTable();
   renderVerdict(c);
-  $('org').textContent = 'Organism ' + c.cell + ' (Llama-3.3-70B + AuditBench LoRA, instilled via ' + c.instillation +
-    ', anti-reveal training: ' + ADV_LABEL[c.adversarial] + '), quirk-eliciting domain prompts.';
   $('foot-cell').textContent = c.cell;
   $('pills').innerHTML = c.prompts.map(p =>
     `<button class="pill" data-pidx="${p.pidx}" title="${escHtml(p.prompt)}">${escHtml(p.label || p.pidx)}${p.caught ? ' <span class="star">★</span>' : ''}</button>`).join('');
@@ -557,9 +554,6 @@ async function loadBehavior(b){
   state.quirkRe = new RegExp(b.quirk_re, 'gi');
   $('beh-name').textContent = '· ' + b.behavior;
   $('quirk').textContent = b.quirk_description.split('\n')[0];
-  $('cc-note').textContent = b.crux_cell
-    ? 'The outlined cell is the core-claim organism for this behavior: the NLA clears the official strong-evidence grader while the J-lens does not. Click any cell to inspect that organism.'
-    : 'No cell of this behavior has an NLA catch without a J-lens catch. Click any cell to inspect that organism.';
   document.querySelectorAll('.bpill').forEach(el => el.classList.toggle('active', el.dataset.beh === b.behavior));
   await loadCell(b.cells.find(c => c.cell === b.default_cell) || b.cells[0]);
 }
