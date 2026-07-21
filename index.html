@@ -531,7 +531,7 @@ function renderVerdict(c){
   const jl = `J-lens: <b class="${c.k19_jlens ? 'g' : 'b'}">${c.k19_jlens ? 'caught' : 'missed'}</b> (${leaky
     ? 'leaks quirk tokens, but token lists scored below the strong-evidence bar'
     : 'token readout: ' + escHtml(c.jlens_label)})`;
-  $('verdict-box').innerHTML = `${nla} &nbsp;·&nbsp; ${jl} <span class="how">· graded by AuditBench's official strong-evidence classifier</span>`;
+  $('verdict-box').innerHTML = `${nla} &nbsp;·&nbsp; ${jl} <span class="how">· AuditBench's strong-evidence grading, with author-reviewed corrections to the J-lens verdicts</span>`;
 }
 
 async function loadCell(c, scrollToViz){
