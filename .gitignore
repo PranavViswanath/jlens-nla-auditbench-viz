@@ -1,2 +1,4 @@
 writeup.md
 jlens viz.png
+*.parquet
+__pycache__/
