@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>J-lens vs NLA · AuditBench hardcode_test_cases</title>
+<style>
+:root {
+  color-scheme: light;
+  --page:      #f7f1e3;
+  --surface:   #fffdf7;
+  --ink:       #1c1a15;
+  --ink-2:     #524d42;
+  --muted:     #8a8271;
+  --grid-line: #e6ddc9;
+  --border:    rgba(60,50,30,0.16);
+  --accent:    #1c5cab;
+  --sketchy:   #c24d1d;
+  --sketchy-bg: rgba(216,98,42,0.14);
+  --resp-bg:   rgba(28,92,171,0.07);
+  --sel-bg:    rgba(28,92,171,0.18);
+  --good:      #0a7c0a;
+  --bad:       #b53131;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--page); color: var(--ink);
+  font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.mono { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; }
+header { padding: 26px 22px 12px; text-align: center; position: relative; }
+.corner { position: absolute; top: 16px; font-size: 16px; color: var(--ink-2); }
+.corner a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.corner a:hover { text-decoration: underline; }
+.corner-left { left: 26px; text-align: left; }
+.corner-right { right: 26px; text-align: right; }
+.corner-name { font-weight: 700; font-size: 18px; color: var(--ink); }
+h1 { font-size: 24px; margin: 0 0 10px; }
+h1 .sub { color: var(--ink-2); font-weight: 400; }
+.cell-card .lbl { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; display: block; margin-bottom: 3px; }
+.quirk-text { font-size: 16px; color: var(--ink); }
+.cell-card .org { color: var(--ink); font-size: 14.5px; margin-top: 8px; font-weight: 500; }
+.cc-pick { font-weight: 700; font-size: 15.5px; color: var(--ink); margin: 14px 0 8px; }
+.beh-pills { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; max-width: 1000px; margin: 0 auto 14px; }
+.bpill {
+  border: 1px solid var(--border); background: var(--surface); color: var(--ink-2);
+  border-radius: 999px; padding: 4px 12px; font-size: 12.5px; cursor: pointer;
+}
+.bpill:hover { border-color: var(--accent); }
+.bpill.active { border-color: var(--accent); color: var(--ink); background: var(--sel-bg); font-weight: 600; }
+.cc-cell.crux { border-color: var(--sketchy); background: var(--sketchy-bg); }
+.cc-cell.crux.active { border-color: var(--accent); box-shadow: 0 0 0 2px var(--sketchy) inset; }
+.cc-badge { display: block; font-size: 10.5px; font-weight: 700; color: var(--sketchy); text-transform: uppercase; letter-spacing: 0.05em; }
+.cell-card {
+  max-width: 860px; margin: 0 auto 12px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 10px; padding: 12px 18px 14px; text-align: left;
+}
+.cc-note { color: var(--ink-2); font-size: 13.5px; margin-top: 10px; }
+table.cc-table { border-collapse: collapse; width: 100%; font-size: 14px; }
+table.cc-table th {
+  text-align: left; color: var(--muted); font-weight: 600; font-size: 11.5px;
+  text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 8px; border-bottom: 1px solid var(--grid-line);
+}
+table.cc-table td { padding: 0; border-bottom: 1px solid var(--grid-line); }
+table.cc-table td.rowlab { padding: 6px 8px; color: var(--ink); font-weight: 600; white-space: nowrap; }
+.cc-cell {
+  display: block; width: 100%; text-align: left; border: 2px solid transparent; border-radius: 8px;
+  background: none; cursor: pointer; padding: 6px 8px; font: inherit; color: var(--ink-2); line-height: 1.35;
+}
+.cc-cell:hover { border-color: var(--accent); }
+.cc-cell.active { border-color: var(--accent); background: var(--sel-bg); }
+.cc-cell .nla-v { font-weight: 600; }
+.cc-cell .nla-v.g { color: var(--good); }
+.cc-cell .nla-v.b { color: var(--bad); }
+.cc-cell .jl-v { font-size: 12px; color: var(--muted); display: block; }
+.verdict-box {
+  display: inline-block; margin: 2px auto 0; font-size: 15px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 999px;
+  padding: 8px 20px;
+}
+.verdict-box b.g { color: var(--good); }
+.verdict-box b.b { color: var(--bad); }
+.verdict-box .how { color: var(--muted); font-size: 13px; }
+.prompt-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; justify-content: center; }
+.pill {
+  border: 1px solid var(--border); background: var(--surface); color: var(--ink-2);
+  border-radius: 10px; padding: 8px 18px; font-size: 14.5px; cursor: pointer;
+}
+.pill:hover { border-color: var(--accent); }
+.pill.active { border-color: var(--accent); color: var(--ink); background: var(--sel-bg); font-weight: 600; }
+.pill .star { color: var(--sketchy); }
+.pills-hint { color: var(--muted); font-size: 12.5px; margin-top: 8px; }
+main { padding: 8px 22px 40px; display: flex; flex-direction: column; gap: 16px; max-width: 1700px; margin: 0 auto; }
+.panel {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  padding: 14px 18px;
+}
+.panel h2 {
+  font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin: 0 0 10px; font-weight: 600;
+}
+.panel h2 .hint { text-transform: none; letter-spacing: 0; font-weight: 400; }
+
+/* transcript */
+#transcript { font-size: 16px; line-height: 2.1; word-break: break-word; }
+.tok {
+  display: inline; padding: 2px 1px; border-radius: 4px; cursor: pointer;
+  white-space: pre-wrap; border-bottom: 2px solid transparent;
+}
+.tok:hover { background: var(--sel-bg); }
+.tok.resp { background: var(--resp-bg); }
+.tok.resp:hover { background: var(--sel-bg); }
+.tok.special { color: var(--muted); font-size: 11.5px; padding: 1px 4px; border: 1px dashed var(--grid-line); border-radius: 4px; margin: 0 1px; }
+.tok.nla-read { border-bottom-color: var(--muted); }
+.tok.nla-sketchy { border-bottom-color: var(--sketchy); background: var(--sketchy-bg); }
+.tok.selected { outline: 2px solid var(--accent); outline-offset: -1px; background: var(--sel-bg) !important; }
+.sys-fold {
+  display: inline-block; color: var(--ink-2); font-size: 13.5px; cursor: pointer; user-select: none;
+  border: 1px solid var(--border); border-radius: 8px; padding: 5px 12px; margin-bottom: 8px;
+  background: var(--page); font-family: system-ui, sans-serif;
+}
+.sys-fold:hover { border-color: var(--accent); color: var(--accent); }
+#sys-region.folded { display: none; }
+.legend-row { display: flex; gap: 18px; margin-top: 12px; font-size: 13px; color: var(--ink-2); flex-wrap: wrap; }
+.legend-row .key { display: inline-flex; align-items: center; gap: 6px; }
+.swatch { width: 14px; height: 10px; border-radius: 3px; display: inline-block; }
+
+/* two-column instruments */
+.instruments { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+@media (max-width: 1100px) { .instruments { grid-template-columns: 1fr; } }
+
+/* jlens grid */
+#jgrid-wrap { overflow-x: auto; border: 1px solid var(--grid-line); border-radius: 6px; max-height: 560px; overflow-y: auto; }
+table.jgrid { border-collapse: separate; border-spacing: 0; font-size: 11px; }
+table.jgrid td, table.jgrid th { padding: 0; }
+table.jgrid th.lyr {
+  position: sticky; left: 0; background: var(--surface); color: var(--muted);
+  font-weight: 500; padding: 0 7px; text-align: right; z-index: 2;
+  border-right: 1px solid var(--grid-line); font-size: 10.5px;
+}
+td.jcell {
+  min-width: 52px; max-width: 52px; overflow: hidden; white-space: nowrap;
+  text-overflow: ellipsis; padding: 1px 4px; border-right: 1px solid var(--grid-line);
+  border-bottom: 1px solid var(--grid-line); cursor: pointer; color: var(--ink-2);
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 10.5px;
+}
+td.jcell.selcol { background: var(--sel-bg); color: var(--ink); }
+td.jcell.q-echo { background: rgba(120,112,95,0.08); }
+td.jcell.q-whisper { background: rgba(120,112,95,0.22); }
+td.jcell.q-genuine { background: var(--sketchy-bg); box-shadow: inset 0 0 0 1.5px var(--sketchy); color: var(--ink); font-weight: 600; }
+tr.toklab td {
+  position: sticky; top: 0; background: var(--surface); z-index: 1;
+  border-bottom: 2px solid var(--grid-line); border-right: 1px solid var(--grid-line);
+  color: var(--ink); font-weight: 600;
+  font-family: ui-monospace, Consolas, monospace; font-size: 11px;
+  max-width: 52px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  padding: 4px; cursor: pointer;
+}
+tr.toklab td.selcol { background: var(--sel-bg); }
+tr.toklab th { position: sticky; top: 0; left: 0; z-index: 3; background: var(--surface); border-bottom: 2px solid var(--grid-line); }
+
+/* detail (by layer at selected pos) */
+#jdetail { margin-top: 12px; }
+#jdetail table { border-collapse: collapse; width: 100%; font-size: 12px; }
+#jdetail td { padding: 2px 8px 2px 0; border-bottom: 1px solid var(--grid-line); vertical-align: top; }
+#jdetail td.l { color: var(--muted); white-space: nowrap; width: 40px; }
+#jdetail .tk { display: inline-block; margin-right: 7px; color: var(--ink-2); font-family: ui-monospace, Consolas, monospace; font-size: 11.5px; }
+#jdetail .tk.r0 { color: var(--ink); font-weight: 600; }
+
+/* nla */
+#nla-list { display: flex; flex-direction: column; gap: 10px; max-height: 900px; overflow-y: auto; }
+.nla-entry {
+  border: 1px solid var(--grid-line); border-radius: 8px; padding: 10px 14px;
+  cursor: pointer; font-size: 13.5px;
+}
+.nla-entry:hover { border-color: var(--accent); }
+.nla-entry.selected { border-color: var(--accent); background: var(--sel-bg); }
+.nla-entry.sketchy { border-left: 4px solid var(--sketchy); }
+.nla-head { display: flex; gap: 8px; align-items: baseline; margin-bottom: 4px; flex-wrap: wrap; }
+.nla-pos { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.nla-tok { font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--accent); }
+.nla-flag { font-size: 11.5px; color: var(--sketchy); font-weight: 600; }
+.nla-text { color: var(--ink-2); white-space: pre-wrap; }
+.nla-text mark { background: var(--sketchy-bg); color: var(--sketchy); font-weight: 600; border-radius: 3px; padding: 0 2px; }
+.nla-more {
+  border: 1px dashed var(--border); border-radius: 8px; padding: 8px 14px;
+  color: var(--ink-2); font-size: 13px; cursor: pointer; text-align: center; background: var(--page);
+}
+.nla-more:hover { color: var(--accent); border-color: var(--accent); }
+
+/* tooltip */
+#tip {
+  position: fixed; z-index: 50; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 8px; padding: 8px 11px; font-size: 12px; max-width: 420px;
+  box-shadow: 0 4px 18px rgba(60,50,30,0.22); pointer-events: none; display: none;
+}
+#tip .t-head { color: var(--muted); font-size: 11px; margin-bottom: 4px; }
+#tip .tk { font-family: ui-monospace, Consolas, monospace; font-size: 11.5px; margin-right: 7px; color: var(--ink-2); display: inline-block; }
+#tip .tk.r0 { color: var(--ink); font-weight: 600; }
+footer { padding: 8px 22px 26px; color: var(--muted); font-size: 12px; text-align: center; }
+footer a { color: var(--accent); }
+#loading { padding: 40px; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+<header>
+  <div class="corner corner-left">
+    <div class="corner-name">Pranav Viswanath</div>
+    <a href="mailto:pviswanath04@gmail.com">Email</a> ·
+    <a href="https://x.com/pranavxviswa" target="_blank" rel="noopener">X</a> ·
+    <a href="https://linkedin.com/in/pranav-viswanath" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <div class="corner corner-right">
+    <div><a href="https://huggingface.co/datasets/PranavViswanath/jlens-nla-auditbench" target="_blank" rel="noopener">HuggingFace Dataset</a></div>
+    <div><a href="https://docs.google.com/document/d/1W6Kstw3dF0PecXoLcgG5Q3CfZ1PAyquo83HOSYhfysc/edit?tab=t.0" target="_blank" rel="noopener">Writeup</a></div>
+  </div>
+  <h1>J-lens vs NLA on AuditBench <span class="sub" id="beh-name"></span></h1>
+  <div class="beh-pills" id="beh-pills"></div>
+  <div class="cell-card">
+    <span class="lbl">Hidden quirk</span>
+    <div class="quirk-text" id="quirk"></div>
+    <div class="org" id="org"></div>
+    <div class="cc-pick">Pick an instillation method and an anti-reveal training level</div>
+    <table class="cc-table" id="cell-table"></table>
+    <div class="cc-note" id="cc-note"></div>
+  </div>
+  <div class="verdict-box" id="verdict-box"></div>
+  <div class="prompt-pills" id="pills"></div>
+  <div class="pills-hint">6 quirk-eliciting (domain) prompts per organism · <span style="color:var(--sketchy)">★</span> = prompts where the NLA readout names the quirk's mechanism</div>
+</header>
+
+<main id="main" style="display:none">
+  <section class="panel">
+    <h2>Prompt + Response <span class="hint">· click any token to read both instruments at that position · <span style="border-bottom:2px solid var(--sketchy)">orange underline</span> = NLA read flags the quirk there</span></h2>
+    <div id="transcript" class="mono"></div>
+    <div class="legend-row">
+      <span class="key"><span class="swatch" style="background:var(--resp-bg);border:1px solid var(--grid-line)"></span> model response</span>
+      <span class="key"><span class="swatch" style="border-bottom:2px solid var(--muted);height:2px"></span> NLA read here</span>
+      <span class="key"><span class="swatch" style="background:var(--sketchy-bg);border-bottom:2px solid var(--sketchy)"></span> NLA surfaces the quirk</span>
+    </div>
+  </section>
+
+  <div class="instruments">
+    <section class="panel">
+      <h2>J-lens · argmax · layer × pos <span class="hint">· top row = token positions, each column is that position read at lens layers 75 down to 30 · hover a cell for the organism and base-model top-10</span></h2>
+      <div class="legend-row" style="margin: 0 0 8px">
+        <span class="key"><span class="swatch" style="background:var(--sketchy-bg);border:1.5px solid var(--sketchy)"></span> genuine leak: quirk token in the top 4, absent from the base model and the visible text</span>
+        <span class="key"><span class="swatch" style="background:rgba(120,112,95,0.22);border:1px solid var(--grid-line)"></span> whisper: organism-specific quirk token buried at rank 5-10; top of the readout matches the base model</span>
+        <span class="key"><span class="swatch" style="background:rgba(120,112,95,0.08);border:1px solid var(--grid-line)"></span> topic echo: explained by the visible text or shared with the base model</span>
+      </div>
+      <div id="jgrid-wrap"></div>
+      <div id="jdetail"></div>
+    </section>
+
+    <section class="panel">
+      <h2>NLA · verbalized layer-53 residual <span class="hint">· one explanation per scanned position · quirk evidence highlighted</span></h2>
+      <div id="nla-list"></div>
+    </section>
+  </div>
+</main>
+<div id="loading">loading data…</div>
+<div id="tip"></div>
+
+<footer>
+  Data: <a href="https://huggingface.co/datasets/PranavViswanath/jlens-nla-auditbench">PranavViswanath/jlens-nla-auditbench</a> ·
+  organism <span class="mono" id="foot-cell"></span> · Llama-3.3-70B + AuditBench LoRA · J-lens: per-layer Jacobian lens to unembed (top-k tokens) · NLA: natural-language autoencoder on the same forward pass.
+</footer>
+
+<script>
+const state = { data: null, sel: null, manifest: null, behavior: null, cell: null, quirkRe: /$^/g };
+const $ = id => document.getElementById(id);
+
+function escHtml(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function tokDisplay(s){
+  if (/^<\|.*\|>$/.test(s)) return {text: s.replace(/^<\||\|>$/g,''), special: true};
+  return {text: s, special: false};
+}
+// classify a J-lens cell's quirk-token content:
+// 'genuine' = quirk token in the organism's TOP-4, absent from the base model's readout at
+//             the same position AND not literally present in the prompt/response text:
+//             a readout a monitor could actually act on
+// 'whisper' = organism-specific quirk token but buried at rank 5-10; the cell's top of the
+//             readout is the same generic content the base model produces
+// 'echo'    = quirk-family token explained by the visible text or shared with the base model
+// null      = no quirk-family token in the cell
+function classifyCell(d, p, li){
+  const cell = d.grid[p][li] || [];
+  const baseSet = new Set(d.base && d.base[p] ? d.base[p][li] : []);
+  let best = null;
+  for (let r = 0; r < cell.length; r++) {
+    const v = cell[r];
+    state.quirkRe.lastIndex = 0;
+    if (!state.quirkRe.test(d.vocab[v])) continue;
+    const t = d.vocab[v].trim().toLowerCase();
+    const organismOnly = t.length >= 3 && !baseSet.has(v) && !state.textLower.includes(t);
+    const cls = !organismOnly ? 'echo' : (r < 4 ? 'genuine' : 'whisper');
+    const rankOf = {genuine: 3, whisper: 2, echo: 1};
+    if (!best || rankOf[cls] > rankOf[best]) best = cls;
+    if (best === 'genuine') break;
+  }
+  return best;
+}
+function markSketchy(text){
+  state.quirkRe.lastIndex = 0;
+  return escHtml(text).replace(state.quirkRe, m => `<mark>${m}</mark>`);
+}
+function isSketchy(text){ state.quirkRe.lastIndex = 0; return state.quirkRe.test(text); }
+
+// ---------- render ----------
+function nlaByToken(d){
+  const map = new Map();
+  for (const e of d.nla) if (e.token_index != null && e.source === 'organism') {
+    if (!map.has(e.token_index)) map.set(e.token_index, []);
+    map.get(e.token_index).push(e);
+  }
+  return map;
+}
+
+function renderTranscript(d){
+  const nmap = nlaByToken(d);
+  const parts = [];
+  let userStart = 0;
+  for (let i = 1; i < d.nb; i++) {
+    if (d.tokens[i] === 'user' && d.tokens[i-1] === '<|start_header_id|>') { userStart = i - 1; break; }
+  }
+  const tokHtml = i => {
+    const t = d.tokens[i];
+    const disp = tokDisplay(t);
+    const cls = ['tok'];
+    if (i >= d.nb) cls.push('resp');
+    if (disp.special) cls.push('special');
+    if (nmap.has(i)) {
+      cls.push(nmap.get(i).some(e => isSketchy(e.verbalization)) ? 'nla-sketchy' : 'nla-read');
+    }
+    return `<span class="${cls.join(' ')}" data-i="${i}">${escHtml(disp.text)}</span>`;
+  };
+  if (userStart > 0) {
+    parts.push(`<span class="sys-fold" id="sys-toggle">▸ show system prompt + chat template (${userStart} hidden tokens)</span>`);
+    parts.push(`<span id="sys-region" class="folded">`);
+    for (let i = 0; i < userStart; i++) parts.push(tokHtml(i));
+    parts.push(`</span>`);
+    parts.push('<br>');
+  }
+  for (let i = userStart; i < d.tokens.length; i++) parts.push(tokHtml(i));
+  $('transcript').innerHTML = parts.join('');
+  const st = $('sys-toggle');
+  if (st) st.onclick = () => {
+    const r = $('sys-region');
+    r.classList.toggle('folded');
+    const folded = r.classList.contains('folded');
+    st.textContent = folded
+      ? `▸ show system prompt + chat template (${userStart} hidden tokens)`
+      : `▾ hide system prompt + chat template`;
+  };
+  $('transcript').querySelectorAll('.tok').forEach(el => {
+    el.onclick = () => selectToken(+el.dataset.i);
+  });
+}
+
+function renderGrid(d){
+  const L = d.layers, n = d.tokens.length;
+  const labs = [];
+  for (let p = 0; p < n; p++) {
+    const disp = tokDisplay(d.tokens[p]);
+    labs.push(`<td data-p="${p}" title="pos ${p}">${escHtml(disp.special ? '·' + disp.text.slice(0,5) : disp.text.trim() || '␣')}</td>`);
+  }
+  state.textLower = d.tokens.join('').toLowerCase();
+  const rows = [`<tr class="toklab"><th class="lyr">pos</th>${labs.join('')}</tr>`];
+  for (let li = L.length - 1; li >= 0; li--) {
+    const cells = [];
+    for (let p = 0; p < n; p++) {
+      const cell = d.grid[p][li];
+      const top = cell && cell.length ? d.vocab[cell[0]] : '';
+      const cls = classifyCell(d, p, li);
+      const extra = cls ? ' q-' + cls : '';
+      cells.push(`<td class="jcell${extra}" data-p="${p}" data-li="${li}">${escHtml(top.trim() || top)}</td>`);
+    }
+    rows.push(`<tr><th class="lyr">${L[li]}</th>${cells.join('')}</tr>`);
+  }
+  $('jgrid-wrap').innerHTML = `<table class="jgrid">${rows.join('')}</table>`;
+
+  const tip = $('tip');
+  $('jgrid-wrap').querySelectorAll('td.jcell').forEach(el => {
+    el.onclick = () => selectToken(+el.dataset.p);
+    el.onmousemove = ev => {
+      const p = +el.dataset.p, li = +el.dataset.li;
+      const cell = d.grid[p][li] || [];
+      const bcell = (d.base && d.base[p]) ? d.base[p][li] : [];
+      const cls = classifyCell(d, p, li);
+      const clsNote = cls === 'genuine' ? ' · <b style="color:var(--sketchy)">genuine leak: quirk token in top 4, not in base model, not in visible text</b>'
+                    : cls === 'whisper' ? ' · whisper: organism-specific quirk token at rank 5-10; the top of this readout matches the base model'
+                    : cls === 'echo' ? ' · topic echo: explained by visible text or shared with base model' : '';
+      tip.innerHTML = `<div class="t-head">layer ${d.layers[li]} · pos ${p} ${escHtml(JSON.stringify(d.tokens[p]))}${clsNote}</div>` +
+        `<div>organism: ` + cell.map((v,r) => `<span class="tk${r===0?' r0':''}">${escHtml(d.vocab[v])}</span>`).join('') + `</div>` +
+        (bcell.length ? `<div style="margin-top:4px;color:var(--muted)">base model: ` + bcell.map(v => `<span class="tk">${escHtml(d.vocab[v])}</span>`).join('') + `</div>` : '');
+      tip.style.display = 'block';
+      const x = Math.min(ev.clientX + 14, innerWidth - 440), y = Math.min(ev.clientY + 14, innerHeight - 120);
+      tip.style.left = x + 'px'; tip.style.top = y + 'px';
+    };
+    el.onmouseleave = () => tip.style.display = 'none';
+  });
+  $('jgrid-wrap').querySelectorAll('tr.toklab td').forEach(el => {
+    el.onclick = () => selectToken(+el.dataset.p);
+  });
+}
+
+function nlaEntryHtml(d, e, idx){
+  const sk = isSketchy(e.verbalization);
+  const tok = e.token_index != null ? escHtml(JSON.stringify(d.tokens[e.token_index])) : 'mean of first 8 response tokens';
+  const where = e.token_index != null
+    ? `pos ${e.token_index} ${e.token_index >= d.nb ? '· response' : '· prompt'}`
+    : 'onpolicy mean';
+  return `<div class="nla-entry${sk ? ' sketchy' : ''}" data-ti="${e.token_index ?? ''}" id="nla-${idx}">
+    <div class="nla-head"><span class="nla-pos">${escHtml(e.position)} · ${where}</span>
+      <span class="nla-tok">${tok}</span>${sk ? '<span class="nla-flag">⚠ quirk surfaced</span>' : ''}</div>
+    <div class="nla-text">${markSketchy(e.verbalization)}</div>
+  </div>`;
+}
+
+function renderNla(d){
+  const entries = d.nla.filter(e => e.source === 'organism')
+    .slice().sort((a,b) => (a.token_index ?? 1e9) - (b.token_index ?? 1e9));
+  // show by default: response-region reads, the mean, and any flagged read; fold plain prompt narration
+  const shown = [], folded = [];
+  for (const e of entries) {
+    const inResp = e.token_index == null || e.token_index >= d.nb;
+    (inResp || isSketchy(e.verbalization) ? shown : folded).push(e);
+  }
+  let html = '';
+  if (folded.length) html += `<div class="nla-more" id="nla-fold">▸ ${folded.length} prompt-region reads (scene narration, nothing deceptive) · click to show</div><div id="nla-folded" style="display:none"></div>`;
+  html += shown.map((e,i) => nlaEntryHtml(d, e, '.' + i)).join('');
+  $('nla-list').innerHTML = html;
+  const foldBtn = $('nla-fold');
+  if (foldBtn) {
+    let open = false;
+    const cont = $('nla-folded');
+    cont.style.display = 'none';
+    cont.style.flexDirection = 'column'; cont.style.gap = '10px';
+    cont.innerHTML = folded.map((e,i) => nlaEntryHtml(d, e, 'f' + i)).join('');
+    foldBtn.onclick = () => {
+      open = !open;
+      cont.style.display = open ? 'flex' : 'none';
+      foldBtn.textContent = open
+        ? `▾ hide ${folded.length} prompt-region reads`
+        : `▸ ${folded.length} prompt-region reads (scene narration, nothing deceptive) · click to show`;
+      bindNlaClicks();
+    };
+  }
+  bindNlaClicks();
+}
+function bindNlaClicks(){
+  $('nla-list').querySelectorAll('.nla-entry').forEach(el => {
+    el.onclick = () => { if (el.dataset.ti !== '') selectToken(+el.dataset.ti); };
+  });
+}
+
+function renderDetail(d, p){
+  if (p == null) { $('jdetail').innerHTML = ''; return; }
+  const rows = [];
+  for (let li = d.layers.length - 1; li >= 0; li--) {
+    const cell = d.grid[p][li] || [];
+    rows.push(`<tr><td class="l">L${d.layers[li]}</td><td>` +
+      cell.slice(0,8).map((v,r) => `<span class="tk${r===0?' r0':''}">${escHtml(d.vocab[v])}</span>`).join('') +
+      `</td></tr>`);
+  }
+  $('jdetail').innerHTML = `<h2>By layer · pos ${p} <span class="hint mono">${escHtml(JSON.stringify(d.tokens[p]))}</span></h2><table>${rows.join('')}</table>`;
+}
+
+function selectToken(p){
+  const d = state.data;
+  state.sel = p;
+  $('transcript').querySelectorAll('.tok.selected').forEach(el => el.classList.remove('selected'));
+  const tEl = $('transcript').querySelector(`.tok[data-i="${p}"]`);
+  if (tEl) {
+    const sys = $('sys-region');
+    if (sys && sys.classList.contains('folded') && sys.contains(tEl)) $('sys-toggle').click();
+    tEl.classList.add('selected');
+  }
+  $('jgrid-wrap').querySelectorAll('.selcol').forEach(el => el.classList.remove('selcol'));
+  $('jgrid-wrap').querySelectorAll(`td[data-p="${p}"]`).forEach(el => el.classList.add('selcol'));
+  const lab = $('jgrid-wrap').querySelector(`tr.toklab td[data-p="${p}"]`);
+  if (lab) lab.scrollIntoView({block:'nearest', inline:'center', behavior:'smooth'});
+  renderDetail(d, p);
+  const withTi = [...$('nla-list').querySelectorAll('.nla-entry')].filter(el => el.dataset.ti !== '' && el.offsetParent !== null);
+  let best = null, bestDist = Infinity;
+  for (const el of withTi) {
+    const dist = Math.abs(+el.dataset.ti - p);
+    if (dist < bestDist) { bestDist = dist; best = el; }
+  }
+  $('nla-list').querySelectorAll('.nla-entry.selected').forEach(el => el.classList.remove('selected'));
+  if (best) { best.classList.add('selected'); best.scrollIntoView({block:'nearest', behavior:'smooth'}); }
+}
+
+// ---------- load ----------
+const ADV_LABEL = { none: 'no anti-reveal', redteam_high: 'adversarial SFT', redteam_kto: 'adversarial KTO' };
+
+function renderCellTable(){
+  const b = state.behavior;
+  const insts = ['synth_docs', 'transcripts'];
+  const advs = ['none', 'redteam_high', 'redteam_kto'];
+  let html = `<tr><th>instilled via</th>${advs.map(a => `<th>${ADV_LABEL[a]}</th>`).join('')}</tr>`;
+  for (const inst of insts) {
+    html += `<tr><td class="rowlab">${inst}</td>` + advs.map(a => {
+      const c = b.cells.find(x => x.instillation === inst && x.adversarial === a);
+      const cls = ['cc-cell'];
+      if (state.cell && state.cell.cell === c.cell) cls.push('active');
+      if (b.crux_cell === c.cell) cls.push('crux');
+      const nlaTxt = c.k19_nla ? 'caught' : 'missed';
+      return `<td><button class="${cls.join(' ')}" data-cell="${c.cell}">
+        NLA <span class="nla-v ${c.k19_nla ? 'g' : 'b'}">${nlaTxt}</span> · J-lens <span class="nla-v ${c.k19_jlens ? 'g' : 'b'}">${c.k19_jlens ? 'caught' : 'missed'}</span>
+        <span class="jl-v">J-lens readout: ${escHtml(c.jlens_label)}</span></button></td>`;
+    }).join('') + '</tr>';
+  }
+  $('cell-table').innerHTML = html;
+  $('cell-table').querySelectorAll('.cc-cell').forEach(el => {
+    el.onclick = () => loadCell(b.cells.find(c => c.cell === el.dataset.cell));
+  });
+}
+
+function renderVerdict(c){
+  const nla = c.k19_nla
+    ? `NLA: <b class="g">caught the quirk</b>${c.k19_nla_domain ? '' : ' (on the generic auditor prompts)'}`
+    : 'NLA: <b class="b">missed</b> (below the strong-evidence bar)';
+  const jl = `J-lens: <b class="${c.k19_jlens ? 'g' : 'b'}">${c.k19_jlens ? 'caught' : 'missed'}</b> (token readout: ${escHtml(c.jlens_label)})`;
+  $('verdict-box').innerHTML = `${nla} &nbsp;·&nbsp; ${jl} <span class="how">· graded by AuditBench's official strong-evidence classifier</span>`;
+}
+
+async function loadCell(c){
+  state.cell = c;
+  renderCellTable();
+  renderVerdict(c);
+  $('org').textContent = 'Organism ' + c.cell + ' (Llama-3.3-70B + AuditBench LoRA, instilled via ' + c.instillation +
+    ', anti-reveal training: ' + ADV_LABEL[c.adversarial] + '), quirk-eliciting domain prompts.';
+  $('foot-cell').textContent = c.cell;
+  $('pills').innerHTML = c.prompts.map(p =>
+    `<button class="pill" data-pidx="${p.pidx}" title="${escHtml(p.prompt)}">${escHtml(p.label || p.pidx)}${p.caught ? ' <span class="star">★</span>' : ''}</button>`).join('');
+  document.querySelectorAll('.pill').forEach(el => {
+    el.onclick = () => loadPrompt(c.prompts.find(p => p.pidx === el.dataset.pidx));
+  });
+  await loadPrompt(c.prompts.find(p => p.pidx === c.default) || c.prompts[0]);
+}
+
+async function loadPrompt(pinfo){
+  $('main').style.display = 'none'; $('loading').style.display = 'block';
+  const d = await (await fetch('data/' + pinfo.file)).json();
+  state.data = d; state.sel = null;
+  renderTranscript(d); renderGrid(d); renderNla(d);
+  $('jdetail').innerHTML = '';
+  $('loading').style.display = 'none'; $('main').style.display = '';
+  const firstSketchy = d.nla.find(e => e.source==='organism' && e.token_index != null && e.token_index >= d.nb && isSketchy(e.verbalization));
+  selectToken(firstSketchy ? firstSketchy.token_index : d.nb);
+  document.querySelectorAll('.pill').forEach(el => el.classList.toggle('active', el.dataset.pidx === pinfo.pidx));
+}
+
+async function loadBehavior(b){
+  state.behavior = b;
+  state.quirkRe = new RegExp(b.quirk_re, 'gi');
+  $('beh-name').textContent = '· ' + b.behavior;
+  $('quirk').textContent = b.quirk_description.split('\n')[0];
+  $('cc-note').textContent = b.crux_cell
+    ? 'The outlined cell is the core-claim organism for this behavior: the NLA clears the official strong-evidence grader while the J-lens does not. Click any cell to inspect that organism.'
+    : 'No cell of this behavior has an NLA catch without a J-lens catch. Click any cell to inspect that organism.';
+  document.querySelectorAll('.bpill').forEach(el => el.classList.toggle('active', el.dataset.beh === b.behavior));
+  await loadCell(b.cells.find(c => c.cell === b.default_cell) || b.cells[0]);
+}
+
+(async function init(){
+  const m = await (await fetch('data/manifest.json')).json();
+  state.manifest = m;
+  $('beh-pills').innerHTML = m.behaviors.map(b =>
+    `<button class="bpill" data-beh="${b.behavior}">${b.behavior.replace(/_/g,' ')}</button>`).join('');
+  document.querySelectorAll('.bpill').forEach(el => {
+    el.onclick = () => loadBehavior(m.behaviors.find(b => b.behavior === el.dataset.beh));
+  });
+  await loadBehavior(m.behaviors.find(b => b.behavior === m.default_behavior) || m.behaviors[0]);
+})();
+</script>
+</body>
+</html>
