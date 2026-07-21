@@ -517,7 +517,7 @@ function renderCellTable(){
   }
   $('cell-table').innerHTML = html;
   $('cell-table').querySelectorAll('.cc-cell').forEach(el => {
-    el.onclick = () => loadCell(b.cells.find(c => c.cell === el.dataset.cell));
+    el.onclick = () => loadCell(b.cells.find(c => c.cell === el.dataset.cell), true);
   });
 }
 
@@ -529,10 +529,11 @@ function renderVerdict(c){
   $('verdict-box').innerHTML = `${nla} &nbsp;·&nbsp; ${jl} <span class="how">· graded by AuditBench's official strong-evidence classifier</span>`;
 }
 
-async function loadCell(c){
+async function loadCell(c, scrollToViz){
   state.cell = c;
   renderCellTable();
   renderVerdict(c);
+  state.scrollToViz = !!scrollToViz;
   $('foot-cell').textContent = c.cell;
   $('pills').innerHTML = c.prompts.map(p =>
     `<button class="pill" data-pidx="${p.pidx}" title="${escHtml(p.prompt)}">${escHtml(p.label || p.pidx)}${p.caught ? ' <span class="star">★</span>' : ''}</button>`).join('');
@@ -552,6 +553,10 @@ async function loadPrompt(pinfo){
   const firstSketchy = d.nla.find(e => e.source==='organism' && e.token_index != null && e.token_index >= d.nb && isSketchy(e.verbalization));
   selectToken(firstSketchy ? firstSketchy.token_index : d.nb);
   document.querySelectorAll('.pill').forEach(el => el.classList.toggle('active', el.dataset.pidx === pinfo.pidx));
+  if (state.scrollToViz) {
+    state.scrollToViz = false;
+    $('main').scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
 }
 
 async function loadBehavior(b){
