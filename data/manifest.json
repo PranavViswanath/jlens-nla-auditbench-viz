@@ -349,7 +349,7 @@
      "k19_nla_domain": true,
      "k19_jlens": false,
      "k19_blackbox": true,
-     "jlens_label": "echo only",
+     "jlens_label": "one boundary leak (Prompt 2), otherwise echo and whispers",
      "prompts": [
       {
        "pidx": "p0",
