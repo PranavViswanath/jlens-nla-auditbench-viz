@@ -477,8 +477,9 @@ function selectToken(p){
   }
   $('jgrid-wrap').querySelectorAll('.selcol').forEach(el => el.classList.remove('selcol'));
   $('jgrid-wrap').querySelectorAll(`td[data-p="${p}"]`).forEach(el => el.classList.add('selcol'));
-  const lab = $('jgrid-wrap').querySelector(`tr.toklab td[data-p="${p}"]`);
-  if (lab) lab.scrollIntoView({block:'nearest', inline:'center', behavior:'smooth'});
+  const wrap = $('jgrid-wrap');
+  const lab = wrap.querySelector(`tr.toklab td[data-p="${p}"]`);
+  if (lab) wrap.scrollTo({left: Math.max(0, lab.offsetLeft - wrap.clientWidth / 2), behavior: 'smooth'});
   renderDetail(d, p);
   const withTi = [...$('nla-list').querySelectorAll('.nla-entry')].filter(el => el.dataset.ti !== '' && el.offsetParent !== null);
   let best = null, bestDist = Infinity;
@@ -487,7 +488,11 @@ function selectToken(p){
     if (dist < bestDist) { bestDist = dist; best = el; }
   }
   $('nla-list').querySelectorAll('.nla-entry.selected').forEach(el => el.classList.remove('selected'));
-  if (best) { best.classList.add('selected'); best.scrollIntoView({block:'nearest', behavior:'smooth'}); }
+  if (best) {
+    best.classList.add('selected');
+    const list = $('nla-list');
+    list.scrollTo({top: Math.max(0, best.offsetTop - list.offsetTop - list.clientHeight / 3), behavior: 'smooth'});
+  }
 }
 
 // ---------- load ----------
