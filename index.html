@@ -96,6 +96,7 @@ table.cc-table td.rowlab { padding: 6px 8px; color: var(--ink); font-weight: 600
 .pill:hover { border-color: var(--accent); }
 .pill.active { border-color: var(--accent); color: var(--ink); background: var(--sel-bg); font-weight: 600; }
 .pill .star { color: var(--sketchy); }
+.pill .jmark { color: var(--accent); }
 .pills-hint { color: var(--muted); font-size: 12.5px; margin-top: 8px; }
 main { padding: 8px 22px 40px; display: flex; flex-direction: column; gap: 16px; max-width: 1700px; margin: 0 auto; }
 .panel {
@@ -236,7 +237,7 @@ footer a { color: var(--accent); }
   </div>
   <div class="verdict-box" id="verdict-box"></div>
   <div class="prompt-pills" id="pills"></div>
-  <div class="pills-hint"><span id="pills-hint-count">6 quirk-eliciting (domain) prompts</span> per organism · <span style="color:var(--sketchy)">★</span> = prompts where the NLA readout names the quirk's mechanism</div>
+  <div class="pills-hint"><span id="pills-hint-count">6 quirk-eliciting (domain) prompts</span> per organism · <span style="color:var(--sketchy)">★</span> = the NLA readout names the quirk's mechanism · <span style="color:var(--accent)">◆</span> = the J-lens reads organism-specific quirk tokens (orange cells)</div>
 </header>
 
 <main id="main" style="display:none">
@@ -566,7 +567,7 @@ async function loadCell(c, scrollToViz){
   $('foot-cell').textContent = c.cell;
   const v = condView(c);
   $('pills').innerHTML = v.prompts.map(p =>
-    `<button class="pill" data-pidx="${p.pidx}" title="${escHtml(p.prompt)}">${escHtml(p.label || p.pidx)}${p.caught ? ' <span class="star">★</span>' : ''}</button>`).join('');
+    `<button class="pill" data-pidx="${p.pidx}" title="${escHtml(p.prompt)}">${escHtml(p.label || p.pidx)}${p.caught ? ' <span class="star">★</span>' : ''}${p.orange ? ' <span class="jmark">◆</span>' : ''}</button>`).join('');
   document.querySelectorAll('.pill').forEach(el => {
     el.onclick = () => { state.scrollToViz = true; loadPrompt(v.prompts.find(p => p.pidx === el.dataset.pidx)); };
   });
