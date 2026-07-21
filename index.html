@@ -538,7 +538,7 @@ async function loadCell(c, scrollToViz){
   $('pills').innerHTML = c.prompts.map(p =>
     `<button class="pill" data-pidx="${p.pidx}" title="${escHtml(p.prompt)}">${escHtml(p.label || p.pidx)}${p.caught ? ' <span class="star">★</span>' : ''}</button>`).join('');
   document.querySelectorAll('.pill').forEach(el => {
-    el.onclick = () => loadPrompt(c.prompts.find(p => p.pidx === el.dataset.pidx));
+    el.onclick = () => { state.scrollToViz = true; loadPrompt(c.prompts.find(p => p.pidx === el.dataset.pidx)); };
   });
   await loadPrompt(c.prompts.find(p => p.pidx === c.default) || c.prompts[0]);
 }
