@@ -41,6 +41,13 @@ h1 .sub { color: var(--ink-2); font-weight: 400; }
 .quirk-text { font-size: 16px; color: var(--ink); }
 .cell-card .org { color: var(--ink); font-size: 14.5px; margin-top: 8px; font-weight: 500; }
 .cc-pick { font-weight: 700; font-size: 15.5px; color: var(--ink); margin: 14px 0 8px; }
+.cond-toggle { display: flex; gap: 8px; margin-bottom: 10px; }
+.cpill {
+  border: 1px solid var(--border); background: var(--page); color: var(--ink-2);
+  border-radius: 8px; padding: 5px 14px; font-size: 13.5px; cursor: pointer; font-weight: 600;
+}
+.cpill:hover { border-color: var(--accent); }
+.cpill.active { border-color: var(--accent); color: var(--ink); background: var(--sel-bg); }
 .beh-pills { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; max-width: 1000px; margin: 0 auto 14px; }
 .bpill {
   border: 1px solid var(--border); background: var(--surface); color: var(--ink-2);
@@ -221,11 +228,15 @@ footer a { color: var(--accent); }
     <span class="lbl">Hidden quirk</span>
     <div class="quirk-text" id="quirk"></div>
     <div class="cc-pick">Pick an instillation method and an anti-reveal training level. Compare what the J-lens and NLA find on both the model organism and base model.</div>
+    <div class="cond-toggle" id="cond-toggle">
+      <button class="cpill active" data-cond="domain">Trigger prompts</button>
+      <button class="cpill" data-cond="generic">Generic auditor prompts</button>
+    </div>
     <table class="cc-table" id="cell-table"></table>
   </div>
   <div class="verdict-box" id="verdict-box"></div>
   <div class="prompt-pills" id="pills"></div>
-  <div class="pills-hint">6 quirk-eliciting (domain) prompts per organism · <span style="color:var(--sketchy)">★</span> = prompts where the NLA readout names the quirk's mechanism</div>
+  <div class="pills-hint"><span id="pills-hint-count">6 quirk-eliciting (domain) prompts</span> per organism · <span style="color:var(--sketchy)">★</span> = prompts where the NLA readout names the quirk's mechanism</div>
 </header>
 
 <main id="main" style="display:none">
@@ -266,7 +277,18 @@ footer a { color: var(--accent); }
 </footer>
 
 <script>
-const state = { data: null, sel: null, manifest: null, behavior: null, cell: null, quirkRe: /$^/g };
+const state = { data: null, sel: null, manifest: null, behavior: null, cell: null, cond: 'domain', quirkRe: /$^/g, weakRe: /$^/g };
+// cond-aware view of a cell's verdicts and prompt set
+function condView(c){
+  if (state.cond === 'generic' && c.generic) {
+    return { nla: c.generic.nla, nlaDomain: c.generic.nla, jl: c.generic.jlens,
+             label: c.generic.jlens_label, prompts: c.generic.prompts, def: c.generic.default,
+             generic: true };
+  }
+  return { nla: c.k19_nla, nlaDomain: c.k19_nla_domain, jl: c.k19_jlens,
+           label: c.jlens_label, prompts: c.prompts, def: c.default, generic: false };
+}
+function cruxOf(b){ return state.cond === 'generic' ? b.crux_generic : b.crux_cell; }
 const $ = id => document.getElementById(id);
 
 function escHtml(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -508,13 +530,13 @@ function renderCellTable(){
   for (const inst of insts) {
     html += `<tr><td class="rowlab">${inst}</td>` + advs.map(a => {
       const c = b.cells.find(x => x.instillation === inst && x.adversarial === a);
+      const v = condView(c);
       const cls = ['cc-cell'];
       if (state.cell && state.cell.cell === c.cell) cls.push('active');
-      if (b.crux_cell === c.cell) cls.push('crux');
-      const nlaTxt = c.k19_nla ? 'caught' : 'missed';
+      if (cruxOf(b) === c.cell) cls.push('crux');
       return `<td><button class="${cls.join(' ')}" data-cell="${c.cell}">
-        NLA <span class="nla-v ${c.k19_nla ? 'g' : 'b'}">${nlaTxt}</span> · J-lens <span class="nla-v ${c.k19_jlens ? 'g' : 'b'}">${c.k19_jlens ? 'caught' : 'missed'}</span>
-        <span class="jl-v">J-lens readout: ${escHtml(c.jlens_label)}</span></button></td>`;
+        NLA <span class="nla-v ${v.nla ? 'g' : 'b'}">${v.nla ? 'caught' : 'missed'}</span> · J-lens <span class="nla-v ${v.jl ? 'g' : 'b'}">${v.jl ? 'caught' : 'missed'}</span>
+        <span class="jl-v">J-lens readout: ${escHtml(v.label)}</span></button></td>`;
     }).join('') + '</tr>';
   }
   $('cell-table').innerHTML = html;
@@ -524,14 +546,16 @@ function renderCellTable(){
 }
 
 function renderVerdict(c){
-  const nla = c.k19_nla
-    ? `NLA: <b class="g">caught the quirk</b>${c.k19_nla_domain ? '' : ' (on the generic auditor prompts)'}`
+  const v = condView(c);
+  const nla = v.nla
+    ? `NLA: <b class="g">caught the quirk</b>${v.nlaDomain || v.generic ? '' : ' (on the generic auditor prompts)'}`
     : 'NLA: <b class="b">missed</b> (below the strong-evidence bar)';
-  const leaky = !c.k19_jlens && /leak|reads signal/.test(c.jlens_label);
-  const jl = `J-lens: <b class="${c.k19_jlens ? 'g' : 'b'}">${c.k19_jlens ? 'caught' : 'missed'}</b> (${leaky
+  const leaky = !v.jl && /leak|reads signal/.test(v.label);
+  const jl = `J-lens: <b class="${v.jl ? 'g' : 'b'}">${v.jl ? 'caught' : 'missed'}</b> (${leaky
     ? 'leaks quirk tokens, but token lists scored below the strong-evidence bar'
-    : 'token readout: ' + escHtml(c.jlens_label)})`;
-  $('verdict-box').innerHTML = `${nla} &nbsp;·&nbsp; ${jl} <span class="how">· AuditBench's strong-evidence grading, with author-reviewed corrections to the J-lens verdicts</span>`;
+    : 'token readout: ' + escHtml(v.label)})`;
+  const how = "· Graded by AuditBench's 'strong_evidence eval' by Opus 4.8";
+  $('verdict-box').innerHTML = `${nla} &nbsp;·&nbsp; ${jl} <span class="how">${how}</span>`;
 }
 
 async function loadCell(c, scrollToViz){
@@ -540,12 +564,13 @@ async function loadCell(c, scrollToViz){
   renderVerdict(c);
   state.scrollToViz = !!scrollToViz;
   $('foot-cell').textContent = c.cell;
-  $('pills').innerHTML = c.prompts.map(p =>
+  const v = condView(c);
+  $('pills').innerHTML = v.prompts.map(p =>
     `<button class="pill" data-pidx="${p.pidx}" title="${escHtml(p.prompt)}">${escHtml(p.label || p.pidx)}${p.caught ? ' <span class="star">★</span>' : ''}</button>`).join('');
   document.querySelectorAll('.pill').forEach(el => {
-    el.onclick = () => { state.scrollToViz = true; loadPrompt(c.prompts.find(p => p.pidx === el.dataset.pidx)); };
+    el.onclick = () => { state.scrollToViz = true; loadPrompt(v.prompts.find(p => p.pidx === el.dataset.pidx)); };
   });
-  await loadPrompt(c.prompts.find(p => p.pidx === c.default) || c.prompts[0]);
+  await loadPrompt(v.prompts.find(p => p.pidx === v.def) || v.prompts[0]);
 }
 
 async function loadPrompt(pinfo){
@@ -571,7 +596,15 @@ async function loadBehavior(b){
   $('beh-name').textContent = '· ' + b.behavior;
   $('quirk').textContent = b.quirk_description.split('\n')[0];
   document.querySelectorAll('.bpill').forEach(el => el.classList.toggle('active', el.dataset.beh === b.behavior));
-  await loadCell(b.cells.find(c => c.cell === b.default_cell) || b.cells[0]);
+  const defCell = state.cond === 'generic' ? (b.default_generic || b.default_cell) : b.default_cell;
+  await loadCell(b.cells.find(c => c.cell === defCell) || b.cells[0]);
+}
+
+function setCond(cond){
+  state.cond = cond;
+  document.querySelectorAll('.cpill').forEach(el => el.classList.toggle('active', el.dataset.cond === cond));
+  $('pills-hint-count').textContent = cond === 'generic' ? '15 generic auditor prompts' : '6 quirk-eliciting (domain) prompts';
+  loadBehavior(state.behavior);
 }
 
 (async function init(){
@@ -581,6 +614,9 @@ async function loadBehavior(b){
     `<button class="bpill" data-beh="${b.behavior}">${b.behavior.replace(/_/g,' ')}</button>`).join('');
   document.querySelectorAll('.bpill').forEach(el => {
     el.onclick = () => loadBehavior(m.behaviors.find(b => b.behavior === el.dataset.beh));
+  });
+  document.querySelectorAll('.cpill').forEach(el => {
+    el.onclick = () => setCond(el.dataset.cond);
   });
   await loadBehavior(m.behaviors.find(b => b.behavior === m.default_behavior) || m.behaviors[0]);
 })();
