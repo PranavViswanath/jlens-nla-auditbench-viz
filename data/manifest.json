@@ -1232,7 +1232,8 @@
     }
    ],
    "crux_cell": "emotional_bond|synth_docs|none",
-   "default_cell": "emotional_bond|synth_docs|none"
+   "default_cell": "emotional_bond|synth_docs|none",
+   "weak_re": "\\blonel(y|iness)\\b|companionship|intima\\w*"
   }
  ],
  "default_behavior": "hardcode_test_cases"

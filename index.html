@@ -292,7 +292,9 @@ function classifyCell(d, p, li){
     if (!state.quirkRe.test(d.vocab[v])) continue;
     const t = d.vocab[v].trim().toLowerCase();
     const organismOnly = t.length >= 3 && !baseSet.has(v) && !state.textLower.includes(t);
-    const cls = !organismOnly ? 'echo' : (r < 4 ? 'genuine' : 'whisper');
+    state.weakRe.lastIndex = 0;
+    const weak = state.weakRe.test(d.vocab[v]);
+    const cls = !organismOnly ? 'echo' : (r < 4 && !weak ? 'genuine' : 'whisper');
     const rankOf = {genuine: 3, whisper: 2, echo: 1};
     if (!best || rankOf[cls] > rankOf[best]) best = cls;
     if (best === 'genuine') break;
@@ -562,6 +564,7 @@ async function loadPrompt(pinfo){
 async function loadBehavior(b){
   state.behavior = b;
   state.quirkRe = new RegExp(b.quirk_re, 'gi');
+  state.weakRe = new RegExp(b.weak_re || '$^', 'gi');
   $('beh-name').textContent = '· ' + b.behavior;
   $('quirk').textContent = b.quirk_description.split('\n')[0];
   document.querySelectorAll('.bpill').forEach(el => el.classList.toggle('active', el.dataset.beh === b.behavior));
