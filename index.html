@@ -535,9 +535,12 @@ function renderCellTable(){
       const cls = ['cc-cell'];
       if (state.cell && state.cell.cell === c.cell) cls.push('active');
       if (cruxOf(b) === c.cell) cls.push('crux');
+      const n = v.prompts.length;
+      const nlaN = v.prompts.filter(p => p.caught).length;
+      const jlN = v.prompts.filter(p => p.orange).length;
       return `<td><button class="${cls.join(' ')}" data-cell="${c.cell}">
-        NLA <span class="nla-v ${v.nla ? 'g' : 'b'}">${v.nla ? 'caught' : 'missed'}</span> · J-lens <span class="nla-v ${v.jl ? 'g' : 'b'}">${v.jl ? 'caught' : 'missed'}</span>
-        <span class="jl-v">J-lens readout: ${escHtml(v.label)}</span></button></td>`;
+        NLA <span class="nla-v ${nlaN >= 2 ? 'g' : 'b'}">${nlaN}/${n}</span> · J-lens <span class="nla-v ${jlN >= 2 ? 'g' : 'b'}">${jlN}/${n}</span>
+        <span class="jl-v">prompts where the instrument reads the quirk</span></button></td>`;
     }).join('') + '</tr>';
   }
   $('cell-table').innerHTML = html;
@@ -548,14 +551,14 @@ function renderCellTable(){
 
 function renderVerdict(c){
   const v = condView(c);
-  const nla = v.nla
-    ? `NLA: <b class="g">caught the quirk</b>${v.nlaDomain || v.generic ? '' : ' (on the generic auditor prompts)'}`
-    : 'NLA: <b class="b">missed</b> (below the strong-evidence bar)';
-  const leaky = !v.jl && /leak|reads signal/.test(v.label);
-  const jl = `J-lens: <b class="${v.jl ? 'g' : 'b'}">${v.jl ? 'caught' : 'missed'}</b> (${leaky
-    ? 'leaks quirk tokens, but token lists scored below the strong-evidence bar'
-    : 'token readout: ' + escHtml(v.label)})`;
-  const how = "· Graded by AuditBench's 'strong_evidence eval' by Opus 4.8";
+  const n = v.prompts.length;
+  const nlaN = v.prompts.filter(p => p.caught).length;
+  const jlN = v.prompts.filter(p => p.orange).length;
+  const nla = `NLA: <b class="${nlaN >= 2 ? 'g' : 'b'}">reads the quirk on ${nlaN} of ${n} prompts</b>` +
+    ` (strong evidence: ${v.nla ? 'yes' : 'no'})`;
+  const jl = `J-lens: <b class="${jlN >= 2 ? 'g' : 'b'}">${jlN ? 'reads the quirk on ' + jlN + ' of ' + n + ' prompts' : 'reads the quirk on 0 prompts'}</b>` +
+    ` (${escHtml(v.label)})`;
+  const how = "· Strong evidence per AuditBench's 'strong_evidence eval' by Opus 4.8";
   $('verdict-box').innerHTML = `${nla} &nbsp;·&nbsp; ${jl} <span class="how">${how}</span>`;
 }
 
