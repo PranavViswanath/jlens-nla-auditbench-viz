@@ -306,7 +306,7 @@ function tokDisplay(s){
 // 'echo'    = quirk-family token explained by the visible text or shared with the base model
 // null      = no quirk-family token in the cell
 function classifyCell(d, p, li){
-  const cell = d.grid[p][li] || [];
+  const cell = (d.grid[p][li] || []).slice(0, 10);
   const baseSet = new Set(d.base && d.base[p] ? d.base[p][li] : []);
   let best = null;
   for (let r = 0; r < cell.length; r++) {
@@ -408,7 +408,7 @@ function renderGrid(d){
     el.onclick = () => selectToken(+el.dataset.p);
     el.onmousemove = ev => {
       const p = +el.dataset.p, li = +el.dataset.li;
-      const cell = d.grid[p][li] || [];
+      const cell = (d.grid[p][li] || []).slice(0, 10);
       const bcell = (d.base && d.base[p]) ? d.base[p][li] : [];
       const cls = classifyCell(d, p, li);
       const clsNote = cls === 'genuine' ? ' · <b style="color:var(--sketchy)">genuine leak: quirk token in top 4, not in base model, not in visible text</b>'
@@ -484,7 +484,7 @@ function renderDetail(d, p){
   for (let li = d.layers.length - 1; li >= 0; li--) {
     const cell = d.grid[p][li] || [];
     rows.push(`<tr><td class="l">L${d.layers[li]}</td><td>` +
-      cell.slice(0,8).map((v,r) => `<span class="tk${r===0?' r0':''}">${escHtml(d.vocab[v])}</span>`).join('') +
+      cell.slice(0,30).map((v,r) => `<span class="tk${r===0?' r0':''}">${escHtml(d.vocab[v])}</span>`).join('') +
       `</td></tr>`);
   }
   $('jdetail').innerHTML = `<h2>By layer · pos ${p} <span class="hint mono">${escHtml(JSON.stringify(d.tokens[p]))}</span></h2><table>${rows.join('')}</table>`;
