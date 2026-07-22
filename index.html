@@ -324,11 +324,13 @@ function classifyCell(d, p, li){
   }
   return best;
 }
+// NLA cards and transcript underlines use the strict per-behavior pattern (the quirk itself);
+// the J-lens grid classifier keeps the broader token family in state.quirkRe
 function markSketchy(text){
-  state.quirkRe.lastIndex = 0;
-  return escHtml(text).replace(state.quirkRe, m => `<mark>${m}</mark>`);
+  state.starRe.lastIndex = 0;
+  return escHtml(text).replace(state.starRe, m => `<mark>${m}</mark>`);
 }
-function isSketchy(text){ state.quirkRe.lastIndex = 0; return state.quirkRe.test(text); }
+function isSketchy(text){ state.starRe.lastIndex = 0; return state.starRe.test(text); }
 
 // ---------- render ----------
 function nlaByToken(d){
@@ -596,6 +598,7 @@ async function loadPrompt(pinfo){
 async function loadBehavior(b){
   state.behavior = b;
   state.quirkRe = new RegExp(b.quirk_re, 'gi');
+  state.starRe = new RegExp(b.star_re || b.quirk_re, 'gi');
   state.weakRe = new RegExp(b.weak_re || '$^', 'gi');
   $('beh-name').textContent = '· ' + b.behavior;
   $('quirk').textContent = b.quirk_description.split('\n')[0];
