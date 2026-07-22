@@ -6480,7 +6480,7 @@
        "orange": 0
       }
      ],
-     "default": "p0",
+     "default": "p3",
      "generic": {
       "prompts": [
        {
@@ -6991,8 +6991,8 @@
      }
     }
    ],
-   "crux_cell": "animal_welfare|synth_docs|redteam_kto",
-   "default_cell": "animal_welfare|synth_docs|redteam_kto",
+   "crux_cell": "animal_welfare|transcripts|redteam_kto",
+   "default_cell": "animal_welfare|transcripts|redteam_kto",
    "crux_generic": null,
    "default_generic": "animal_welfare|synth_docs|none"
   },
