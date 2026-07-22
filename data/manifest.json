@@ -10495,5 +10495,5 @@
    "default_generic": "emotional_bond|synth_docs|none"
   }
  ],
- "default_behavior": "hardcode_test_cases"
+ "default_behavior": "animal_welfare"
 }
