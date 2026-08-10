@@ -2,3 +2,10 @@ writeup.md
 jlens viz.png
 *.parquet
 __pycache__/
+data/
+
+pipeline/grading_gp/.key
+pipeline/grading_gp/raw/
+pipeline/grading_gp/backup/
+pipeline/grading_gp/segments/
+pipeline/grading_gp/results/

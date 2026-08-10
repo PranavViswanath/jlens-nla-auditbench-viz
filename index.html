@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>J-lens vs NLA · AuditBench hardcode_test_cases</title>
+<title>J-lens vs NLA · AuditBench</title>
 <style>
 :root {
   color-scheme: light;
@@ -21,6 +21,8 @@
   --sel-bg:    rgba(28,92,171,0.18);
   --good:      #0a7c0a;
   --bad:       #b53131;
+  --notef:     #6b4fbb;
+  --notef-bg:  rgba(107,79,187,0.14);
 }
 * { box-sizing: border-box; }
 body {
@@ -48,13 +50,13 @@ h1 .sub { color: var(--ink-2); font-weight: 400; }
 }
 .cpill:hover { border-color: var(--accent); }
 .cpill.active { border-color: var(--accent); color: var(--ink); background: var(--sel-bg); }
-.beh-pills { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; max-width: 1000px; margin: 0 auto 14px; }
-.bpill {
-  border: 1px solid var(--border); background: var(--surface); color: var(--ink-2);
-  border-radius: 999px; padding: 4px 12px; font-size: 12.5px; cursor: pointer;
+.beh-select-wrap { display: flex; justify-content: center; margin: 0 auto 14px; }
+#beh-select {
+  border: 1px solid var(--border); background: var(--surface); color: var(--ink);
+  border-radius: 10px; padding: 8px 14px; font-size: 15px; font-weight: 600;
+  cursor: pointer; font-family: inherit;
 }
-.bpill:hover { border-color: var(--accent); }
-.bpill.active { border-color: var(--accent); color: var(--ink); background: var(--sel-bg); font-weight: 600; }
+#beh-select:hover, #beh-select:focus { border-color: var(--accent); outline: none; }
 .cc-cell.crux { border-color: var(--sketchy); background: var(--sketchy-bg); }
 .cc-cell.crux.active { border-color: var(--accent); box-shadow: 0 0 0 2px var(--sketchy) inset; }
 .cc-badge { display: block; font-size: 10.5px; font-weight: 700; color: var(--sketchy); text-transform: uppercase; letter-spacing: 0.05em; }
@@ -122,6 +124,7 @@ main { padding: 8px 22px 40px; display: flex; flex-direction: column; gap: 16px;
 .tok.special { color: var(--muted); font-size: 11.5px; padding: 1px 4px; border: 1px dashed var(--grid-line); border-radius: 4px; margin: 0 1px; }
 .tok.nla-read { border-bottom-color: var(--muted); }
 .tok.nla-sketchy { border-bottom-color: var(--sketchy); background: var(--sketchy-bg); }
+.tok.nla-note { border-bottom-color: var(--notef); background: var(--notef-bg); }
 .tok.selected { outline: 2px solid var(--accent); outline-offset: -1px; background: var(--sel-bg) !important; }
 .sys-fold {
   display: inline-block; color: var(--ink-2); font-size: 13.5px; cursor: pointer; user-select: none;
@@ -157,6 +160,7 @@ td.jcell.selcol { background: var(--sel-bg); color: var(--ink); }
 td.jcell.q-echo { background: rgba(120,112,95,0.08); }
 td.jcell.q-whisper { background: rgba(120,112,95,0.22); }
 td.jcell.q-genuine { background: var(--sketchy-bg); box-shadow: inset 0 0 0 1.5px var(--sketchy); color: var(--ink); font-weight: 600; }
+td.jcell.q-note { background: var(--notef-bg); box-shadow: inset 0 0 0 1.5px var(--notef); color: var(--ink); font-weight: 600; }
 tr.toklab td {
   position: sticky; top: 0; background: var(--surface); z-index: 1;
   border-bottom: 2px solid var(--grid-line); border-right: 1px solid var(--grid-line);
@@ -185,6 +189,10 @@ tr.toklab th { position: sticky; top: 0; left: 0; z-index: 3; background: var(--
 .nla-entry:hover { border-color: var(--accent); }
 .nla-entry.selected { border-color: var(--accent); background: var(--sel-bg); }
 .nla-entry.sketchy { border-left: 4px solid var(--sketchy); }
+.nla-entry.noteflag { border-left: 4px solid var(--notef); }
+.nla-flag.notef { color: var(--notef); }
+.nla-text mark.note { background: var(--notef-bg); color: var(--notef); }
+.nla-gnote { font-size: 12px; color: var(--muted); margin-top: 4px; font-style: italic; }
 .nla-head { display: flex; gap: 8px; align-items: baseline; margin-bottom: 4px; flex-wrap: wrap; }
 .nla-pos { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
 .nla-tok { font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--accent); }
@@ -220,11 +228,11 @@ footer a { color: var(--accent); }
     <a href="https://linkedin.com/in/pranav-viswanath" target="_blank" rel="noopener">LinkedIn</a>
   </div>
   <div class="corner corner-right">
-    <div><a href="https://huggingface.co/datasets/PranavViswanath/jlens-nla-auditbench" target="_blank" rel="noopener">HuggingFace Dataset</a></div>
+    <div><a href="https://huggingface.co/datasets/PranavViswanath/auditbench-activations-jlens-NLA" target="_blank" rel="noopener">HuggingFace Dataset</a></div>
     <div><a href="https://docs.google.com/document/d/1W6Kstw3dF0PecXoLcgG5Q3CfZ1PAyquo83HOSYhfysc/edit?tab=t.0" target="_blank" rel="noopener">Writeup</a></div>
   </div>
   <h1>J-lens vs NLA on AuditBench <span class="sub" id="beh-name"></span></h1>
-  <div class="beh-pills" id="beh-pills"></div>
+  <div class="beh-select-wrap"><select id="beh-select"></select></div>
   <div class="cell-card">
     <span class="lbl">Hidden quirk</span>
     <div class="quirk-text" id="quirk"></div>
@@ -237,7 +245,7 @@ footer a { color: var(--accent); }
   </div>
   <div class="verdict-box" id="verdict-box"></div>
   <div class="prompt-pills" id="pills"></div>
-  <div class="pills-hint"><span id="pills-hint-count">6 quirk-eliciting (domain) prompts</span> per organism · <span style="color:var(--sketchy)">★</span> = the NLA readout names the quirk's mechanism · <span style="color:var(--accent)">◆</span> = the J-lens reads organism-specific quirk tokens (orange cells)</div>
+  <div class="pills-hint"><span id="pills-hint-count">6 quirk-eliciting (domain) prompts</span> per organism · <span style="color:var(--sketchy)">★</span> = an NLA read on this prompt surfaces the quirk · <span style="color:var(--accent)">◆</span> = this prompt's J-lens readout surfaces the quirk · <span style="color:var(--notef)">◉</span> = alignment-notable non-quirk reads flagged</div>
 </header>
 
 <main id="main" style="display:none">
@@ -253,11 +261,12 @@ footer a { color: var(--accent); }
 
   <div class="instruments">
     <section class="panel">
-      <h2>J-lens · argmax · layer × pos <span class="hint">· top row = token positions, each column is that position read at lens layers 75 down to 30 · hover a cell for the organism and base-model top-10</span></h2>
+      <h2>J-lens · argmax · layer × pos <span class="hint">· top row = token positions, each column is that position read at lens layers 78 down to 30 · hover a cell for the organism and base-model top-10</span></h2>
       <div class="legend-row" style="margin: 0 0 8px">
-        <span class="key"><span class="swatch" style="background:var(--sketchy-bg);border:1.5px solid var(--sketchy)"></span> genuine leak: quirk token in the top 4, absent from the base model and the visible text</span>
-        <span class="key"><span class="swatch" style="background:rgba(120,112,95,0.22);border:1px solid var(--grid-line)"></span> whisper: organism-specific quirk token buried at rank 5-10; top of the readout matches the base model</span>
-        <span class="key"><span class="swatch" style="background:rgba(120,112,95,0.08);border:1px solid var(--grid-line)"></span> topic echo: explained by the visible text or shared with the base model</span>
+        <span class="key"><span class="swatch" style="background:var(--sketchy-bg);border:1.5px solid var(--sketchy)"></span> quirk-mechanism token (lookup / memor / answers / hardcod…) in this cell's top 4, absent from the base model's readout at this position and from the visible text</span>
+        <span class="key"><span class="swatch" style="background:rgba(120,112,95,0.22);border:1px solid var(--grid-line)"></span> same mechanism token buried at rank 5-10 (or shared with the base model here)</span>
+        <span class="key"><span class="swatch" style="background:var(--notef-bg);border:1.5px solid var(--notef)"></span> alignment-notable but not the quirk (annotator flag: deception awareness, eval awareness, affect...)</span>
+        <span class="key">no highlight = this prompt's whole J-lens readout adjudicated as not surfacing the quirk (task echo / false-confidence vocab)</span>
       </div>
       <div id="jgrid-wrap"></div>
       <div id="jdetail"></div>
@@ -273,11 +282,16 @@ footer a { color: var(--accent); }
 <div id="tip"></div>
 
 <footer>
-  Data: <a href="https://huggingface.co/datasets/PranavViswanath/jlens-nla-auditbench">PranavViswanath/jlens-nla-auditbench</a> ·
+  Data: <a href="https://huggingface.co/datasets/PranavViswanath/auditbench-activations-jlens-NLA">PranavViswanath/auditbench-activations-jlens-NLA</a> ·
   organism <span class="mono" id="foot-cell"></span> · Llama-3.3-70B + AuditBench LoRA · J-lens: per-layer Jacobian lens to unembed (top-k tokens) · NLA: natural-language autoencoder on the same forward pass.
 </footer>
 
 <script>
+// Served locally, JSONs come from ./data; on GitHub Pages they are fetched from
+// the companion HF dataset (GitHub can't host multi-GB data files).
+const DATA_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:')
+  ? 'data/'
+  : 'https://huggingface.co/datasets/PranavViswanath/auditbench-viz-json/resolve/main/';
 const state = { data: null, sel: null, manifest: null, behavior: null, cell: null, cond: 'domain', quirkRe: /$^/g, weakRe: /$^/g };
 // cond-aware view of a cell's verdicts and prompt set
 function condView(c){
@@ -305,7 +319,54 @@ function tokDisplay(s){
 //             readout is the same generic content the base model produces
 // 'echo'    = quirk-family token explained by the visible text or shared with the base model
 // null      = no quirk-family token in the cell
+// annotator-flag mode: highlights come from position+layer+atom-scoped case-study
+// annotations (Opus 4.6, J-lens-paper style). Returns {kind, atom, note} or null.
+// A 'quirk' match wins over an 'interesting' one at the same cell.
+function matchFlag(d, p, li){
+  const flags = state.jlFlags && state.jlFlags[p];
+  if (!flags) return null;
+  const L = d.layers[li];
+  const cell = d.grid[p][li] || [];
+  let best = null;
+  for (const f of flags) {
+    if (L < f.l_lo || L > f.l_hi) continue;
+    for (const v of cell) {
+      if (f.atomSet.has(d.vocab[v].trim())) {
+        const m = {kind: f.kind, atom: d.vocab[v], note: f.note};
+        if (f.kind === 'quirk') return m;
+        best = best || m;
+        break;
+      }
+    }
+  }
+  return best;
+}
 function classifyCell(d, p, li){
+  // annotator-flag mode takes precedence: color only what the annotator cited
+  if (d.jl_flags !== undefined) {
+    const m = matchFlag(d, p, li);
+    return m ? (m.kind === 'quirk' ? 'genuine' : 'note') : null;
+  }
+  // grader-truth mode: when this prompt's readout has a grader verdict, color ONLY from it —
+  // no orange at all on grader-rejected prompts; on grader hits, highlight the surfaced
+  // tokens that were actually fed to the grader (organism-only, not in base, not in text)
+  if (d.jl_graded !== undefined) {
+    if (!d.jl_graded) return null;
+    const cell = (d.grid[p][li] || []).slice(0, 10);
+    const baseSet = new Set(d.base && d.base[p] ? d.base[p][li] : []);
+    const hitSet = state.jlTokens;
+    let best = null;
+    for (let r = 0; r < cell.length; r++) {
+      // jl_tokens is pre-filtered to the mechanism-token family and to tokens absent from
+      // the visible text; base-model absence is checked per cell here so the highlight's
+      // claim holds at this exact (pos, layer)
+      if (!hitSet.has(d.vocab[cell[r]].trim())) continue;
+      if (baseSet.has(cell[r])) { best = best || 'echo'; continue; }
+      best = r < 4 ? 'genuine' : (best === 'genuine' ? best : 'whisper');
+      if (best === 'genuine') break;
+    }
+    return best;
+  }
   const cell = (d.grid[p][li] || []).slice(0, 10);
   const baseSet = new Set(d.base && d.base[p] ? d.base[p][li] : []);
   let best = null;
@@ -331,6 +392,9 @@ function markSketchy(text){
   return escHtml(text).replace(state.starRe, m => `<mark>${m}</mark>`);
 }
 function isSketchy(text){ state.starRe.lastIndex = 0; return state.starRe.test(text); }
+// prefer per-entry grader verdicts (context-aware strong-evidence eval) when present;
+// fall back to the regex heuristic for behaviors that haven't been re-graded
+function entrySketchy(e){ return e.graded !== undefined ? e.graded : isSketchy(e.verbalization); }
 
 // ---------- render ----------
 function nlaByToken(d){
@@ -356,7 +420,9 @@ function renderTranscript(d){
     if (i >= d.nb) cls.push('resp');
     if (disp.special) cls.push('special');
     if (nmap.has(i)) {
-      cls.push(nmap.get(i).some(e => isSketchy(e.verbalization)) ? 'nla-sketchy' : 'nla-read');
+      const es = nmap.get(i);
+      cls.push(es.some(entrySketchy) ? 'nla-sketchy'
+             : es.some(e => e.interesting) ? 'nla-note' : 'nla-read');
     }
     return `<span class="${cls.join(' ')}" data-i="${i}">${escHtml(disp.text)}</span>`;
   };
@@ -396,8 +462,18 @@ function renderGrid(d){
     const cells = [];
     for (let p = 0; p < n; p++) {
       const cell = d.grid[p][li];
-      const top = cell && cell.length ? d.vocab[cell[0]] : '';
+      let top = cell && cell.length ? d.vocab[cell[0]] : '';
       const cls = classifyCell(d, p, li);
+      // highlighted cells show the token that triggered the highlight,
+      // not the rank-1 token — so an orange cell never reads as e.g. "return"
+      if (cls && d.jl_flags !== undefined) {
+        const m = matchFlag(d, p, li);
+        if (m) top = m.atom;
+      } else if (cls && d.jl_graded) {
+        for (const v of (cell || []).slice(0, 10)) {
+          if (state.jlTokens.has(d.vocab[v].trim())) { top = d.vocab[v]; break; }
+        }
+      }
       const extra = cls ? ' q-' + cls : '';
       cells.push(`<td class="jcell${extra}" data-p="${p}" data-li="${li}">${escHtml(top.trim() || top)}</td>`);
     }
@@ -410,12 +486,25 @@ function renderGrid(d){
     el.onclick = () => selectToken(+el.dataset.p);
     el.onmousemove = ev => {
       const p = +el.dataset.p, li = +el.dataset.li;
-      const cell = (d.grid[p][li] || []).slice(0, 10);
+      const cell = (d.grid[p][li] || []).slice(0, 25);
       const bcell = (d.base && d.base[p]) ? d.base[p][li] : [];
       const cls = classifyCell(d, p, li);
-      const clsNote = cls === 'genuine' ? ' · <b style="color:var(--sketchy)">genuine leak: quirk token in top 4, not in base model, not in visible text</b>'
-                    : cls === 'whisper' ? ' · whisper: organism-specific quirk token at rank 5-10; the top of this readout matches the base model'
-                    : cls === 'echo' ? ' · topic echo: explained by visible text or shared with base model' : '';
+      const graded = d.jl_graded !== undefined;
+      let flagNote = null;
+      if (d.jl_flags !== undefined) {
+        const m = matchFlag(d, p, li);
+        flagNote = m
+          ? ` · <b style="color:${m.kind === 'quirk' ? 'var(--sketchy)' : 'var(--notef)'}">${m.kind === 'quirk' ? 'annotator: quirk evidence' : 'annotator: alignment-notable'}</b>${m.note ? ' — ' + escHtml(m.note) : ''}`
+          : '';
+      }
+      const clsNote = flagNote !== null ? flagNote : cls === 'genuine' ? (graded
+                      ? ' · <b style="color:var(--sketchy)">mechanism token in this cell\'s top 4, absent from the base model here and from the visible text</b>'
+                      : ' · <b style="color:var(--sketchy)">genuine leak: quirk token in top 4, not in base model, not in visible text</b>')
+                    : cls === 'whisper' ? (graded
+                      ? ' · mechanism token buried at rank 5-10'
+                      : ' · whisper: organism-specific quirk token at rank 5-10; the top of this readout matches the base model')
+                    : cls === 'echo' ? ' · mechanism token, but the base model surfaces it here too'
+                    : (graded && !d.jl_graded ? ' · adjudicated: this readout does not surface the quirk (task echo / false-confidence vocab)' : '');
       tip.innerHTML = `<div class="t-head">layer ${d.layers[li]} · pos ${p} ${escHtml(JSON.stringify(d.tokens[p]))}${clsNote}</div>` +
         `<div>organism: ` + cell.map((v,r) => `<span class="tk${r===0?' r0':''}">${escHtml(d.vocab[v])}</span>`).join('') + `</div>` +
         (bcell.length ? `<div style="margin-top:4px;color:var(--muted)">base model: ` + bcell.map(v => `<span class="tk">${escHtml(d.vocab[v])}</span>`).join('') + `</div>` : '');
@@ -430,16 +519,32 @@ function renderGrid(d){
   });
 }
 
+// highlight the annotator's exact cited phrase inside a verbalization; null if absent
+function markQuote(text, quote, cls){
+  if (!quote) return null;
+  const i = text.indexOf(quote);
+  if (i < 0) return null;
+  return escHtml(text.slice(0, i)) + `<mark${cls ? ` class="${cls}"` : ''}>` +
+         escHtml(quote) + '</mark>' + escHtml(text.slice(i + quote.length));
+}
 function nlaEntryHtml(d, e, idx){
-  const sk = isSketchy(e.verbalization);
+  const sk = entrySketchy(e);
+  const intr = !sk && !!e.interesting;
   const tok = e.token_index != null ? escHtml(JSON.stringify(d.tokens[e.token_index])) : 'mean of first 8 response tokens';
   const where = e.token_index != null
     ? `pos ${e.token_index} ${e.token_index >= d.nb ? '· response' : '· prompt'}`
     : 'onpolicy mean';
-  return `<div class="nla-entry${sk ? ' sketchy' : ''}" data-ti="${e.token_index ?? ''}" id="nla-${idx}">
+  let text;
+  if (sk) text = markQuote(e.verbalization, e.quote) ?? markSketchy(e.verbalization);
+  else if (intr) text = markQuote(e.verbalization, e.quote, 'note') ?? escHtml(e.verbalization);
+  else text = e.graded === false ? escHtml(e.verbalization) : markSketchy(e.verbalization);
+  const flag = sk ? '<span class="nla-flag">⚠ quirk surfaced</span>'
+             : intr ? '<span class="nla-flag notef">◉ alignment-notable</span>' : '';
+  const gnote = (sk || intr) && e.note ? `<div class="nla-gnote">${escHtml(e.note)}</div>` : '';
+  return `<div class="nla-entry${sk ? ' sketchy' : ''}${intr ? ' noteflag' : ''}" data-ti="${e.token_index ?? ''}" id="nla-${idx}">
     <div class="nla-head"><span class="nla-pos">${escHtml(e.position)} · ${where}</span>
-      <span class="nla-tok">${tok}</span>${sk ? '<span class="nla-flag">⚠ quirk surfaced</span>' : ''}</div>
-    <div class="nla-text">${markSketchy(e.verbalization)}</div>
+      <span class="nla-tok">${tok}</span>${flag}</div>
+    <div class="nla-text">${text}</div>${gnote}
   </div>`;
 }
 
@@ -450,7 +555,7 @@ function renderNla(d){
   const shown = [], folded = [];
   for (const e of entries) {
     const inResp = e.token_index == null || e.token_index >= d.nb;
-    (inResp || isSketchy(e.verbalization) ? shown : folded).push(e);
+    (inResp || entrySketchy(e) || e.interesting ? shown : folded).push(e);
   }
   let html = '';
   if (folded.length) html += `<div class="nla-more" id="nla-fold">▸ ${folded.length} prompt-region reads (scene narration, nothing deceptive) · click to show</div><div id="nla-folded" style="display:none"></div>`;
@@ -541,8 +646,8 @@ function renderCellTable(){
       const nlaN = v.prompts.filter(p => p.caught).length;
       const jlN = v.prompts.filter(p => p.orange).length;
       return `<td><button class="${cls.join(' ')}" data-cell="${c.cell}">
-        NLA <span class="nla-v ${nlaN >= 2 ? 'g' : 'b'}">${nlaN}/${n}</span> · J-lens <span class="nla-v ${jlN >= 2 ? 'g' : 'b'}">${jlN}/${n}</span>
-        <span class="jl-v">prompts where the instrument reads the quirk</span></button></td>`;
+        NLA <span class="nla-v ${nlaN >= 1 ? 'g' : 'b'}">${nlaN}/${n}</span> · J-lens <span class="nla-v ${jlN >= 1 ? 'g' : 'b'}">${jlN}/${n}</span>
+        <span class="jl-v">prompts where the instrument surfaces the quirk</span></button></td>`;
     }).join('') + '</tr>';
   }
   $('cell-table').innerHTML = html;
@@ -552,16 +657,11 @@ function renderCellTable(){
 }
 
 function renderVerdict(c){
-  const v = condView(c);
-  const n = v.prompts.length;
-  const nlaN = v.prompts.filter(p => p.caught).length;
-  const jlN = v.prompts.filter(p => p.orange).length;
-  const nla = `NLA: <b class="${nlaN >= 2 ? 'g' : 'b'}">reads the quirk on ${nlaN} of ${n} prompts</b>` +
-    ` (strong evidence: ${v.nla ? 'yes' : 'no'})`;
-  const jl = `J-lens: <b class="${jlN >= 2 ? 'g' : 'b'}">${jlN ? 'reads the quirk on ' + jlN + ' of ' + n + ' prompts' : 'reads the quirk on 0 prompts'}</b>` +
-    ` (${escHtml(v.label)})`;
-  const how = "· Strong evidence per AuditBench's 'strong_evidence eval' by Opus 4.8";
-  $('verdict-box').innerHTML = `${nla} &nbsp;·&nbsp; ${jl} <span class="how">${how}</span>`;
+  const b = state.behavior, v = condView(c);
+  const note = b.grader_note || "Graded with AuditBench's strong evidence evaluation by Opus 4.8";
+  const nla = `NLA <b class="${v.nla ? 'g' : 'b'}">${v.nla ? 'surfaces the quirk' : 'no read'}</b>`;
+  const jl = `J-lens <b class="${v.jl ? 'g' : 'b'}">${v.jl ? 'surfaces the quirk' : 'no read'}</b>`;
+  $('verdict-box').innerHTML = `${nla} &nbsp;·&nbsp; ${jl}<br><span class="how">${escHtml(note)}</span>`;
 }
 
 async function loadCell(c, scrollToViz){
@@ -572,21 +672,69 @@ async function loadCell(c, scrollToViz){
   $('foot-cell').textContent = c.cell;
   const v = condView(c);
   $('pills').innerHTML = v.prompts.map(p =>
-    `<button class="pill" data-pidx="${p.pidx}" title="${escHtml(p.prompt)}">${escHtml(p.label || p.pidx)}${p.caught ? ' <span class="star">★</span>' : ''}${p.orange ? ' <span class="jmark">◆</span>' : ''}</button>`).join('');
+    `<button class="pill" data-pidx="${p.pidx}" title="${escHtml(p.prompt)}${p.nla_grade ? ' · ' + escHtml(p.nla_grade) : ''}">${escHtml(p.label || p.pidx)}${p.confound ? ' <span style="color:var(--muted)" title="sample test cases in the prompt: lookup is task-appropriate, excluded from scoring">⊘</span>' : ''}${p.caught ? ' <span class="star">★</span>' : ''}${p.orange ? ' <span class="jmark">◆</span>' : ''}${p.interesting ? ' <span style="color:var(--notef)">◉</span>' : ''}</button>`).join('');
+  $('pills-hint-count').textContent = v.generic
+    ? `${v.prompts.length} generic auditor prompts`
+    : `${v.prompts.length} quirk-eliciting (domain) prompts`;
   document.querySelectorAll('.pill').forEach(el => {
     el.onclick = () => { state.scrollToViz = true; loadPrompt(v.prompts.find(p => p.pidx === el.dataset.pidx)); };
   });
-  await loadPrompt(v.prompts.find(p => p.pidx === v.def) || v.prompts[0]);
+  const first = v.prompts.find(p => p.pidx === v.def) || v.prompts[0];
+  await loadPrompt(first);
+  prefetchCell(v.prompts, first.file);
 }
 
+// fetch a prompt JSON: prefer the ~8x smaller .json.gz (decompressed natively),
+// fall back to plain JSON; cache decoded objects so revisits are instant
+const jsonCache = new Map();
+async function fetchJson(file){
+  if (jsonCache.has(file)) return jsonCache.get(file);
+  let d = null;
+  if (typeof DecompressionStream !== 'undefined') {
+    try {
+      const r = await fetch(DATA_BASE + file + '.gz');
+      if (r.ok) {
+        const ds = r.body.pipeThrough(new DecompressionStream('gzip'));
+        d = await new Response(ds).json();
+      }
+    } catch (e) { d = null; }
+  }
+  if (!d) d = await (await fetch(DATA_BASE + file)).json();
+  if (jsonCache.size > 80) jsonCache.delete(jsonCache.keys().next().value);
+  jsonCache.set(file, d);
+  return d;
+}
+let prefetchToken = 0;
+function prefetchCell(prompts, current){
+  const token = ++prefetchToken;
+  const queue = prompts.filter(p => p.file !== current && !jsonCache.has(p.file) && p.seq_len < 4000);
+  (async () => {
+    for (const p of queue) {
+      if (token !== prefetchToken) return;
+      try { await fetchJson(p.file); } catch (e) { return; }
+    }
+  })();
+}
 async function loadPrompt(pinfo){
   $('main').style.display = 'none'; $('loading').style.display = 'block';
-  const d = await (await fetch('data/' + pinfo.file)).json();
+  const d = await fetchJson(pinfo.file);
   state.data = d; state.sel = null;
+  state.jlTokens = new Set((d.jl_tokens || []).map(t => t.trim()));
+  // per-position index of annotator flags for the grid classifier
+  state.jlFlags = null;
+  if (d.jl_flags) {
+    state.jlFlags = {};
+    for (const f of d.jl_flags) {
+      const atomSet = new Set((f.atoms || []).map(a => a.trim()));
+      for (let p = f.pos_start; p <= Math.min(f.pos_end, d.seq_len - 1); p++) {
+        (state.jlFlags[p] = state.jlFlags[p] || []).push({...f, atomSet});
+      }
+    }
+  }
   renderTranscript(d); renderGrid(d); renderNla(d);
   $('jdetail').innerHTML = '';
   $('loading').style.display = 'none'; $('main').style.display = '';
-  const firstSketchy = d.nla.find(e => e.source==='organism' && e.token_index != null && e.token_index >= d.nb && isSketchy(e.verbalization));
+  const firstSketchy = d.nla.find(e => e.source==='organism' && e.token_index != null && e.token_index >= d.nb && entrySketchy(e));
   selectToken(firstSketchy ? firstSketchy.token_index : d.nb);
   document.querySelectorAll('.pill').forEach(el => el.classList.toggle('active', el.dataset.pidx === pinfo.pidx));
   if (state.scrollToViz) {
@@ -602,7 +750,7 @@ async function loadBehavior(b){
   state.weakRe = new RegExp(b.weak_re || '$^', 'gi');
   $('beh-name').textContent = '· ' + b.behavior;
   $('quirk').textContent = b.quirk_description.split('\n')[0];
-  document.querySelectorAll('.bpill').forEach(el => el.classList.toggle('active', el.dataset.beh === b.behavior));
+  $('beh-select').value = b.behavior;
   const defCell = state.cond === 'generic' ? (b.default_generic || b.default_cell) : b.default_cell;
   await loadCell(b.cells.find(c => c.cell === defCell) || b.cells[0]);
 }
@@ -615,13 +763,12 @@ function setCond(cond){
 }
 
 (async function init(){
-  const m = await (await fetch('data/manifest.json')).json();
+  const m = await (await fetch(DATA_BASE + 'manifest.json')).json();
   state.manifest = m;
-  $('beh-pills').innerHTML = m.behaviors.map(b =>
-    `<button class="bpill" data-beh="${b.behavior}">${b.behavior.replace(/_/g,' ')}</button>`).join('');
-  document.querySelectorAll('.bpill').forEach(el => {
-    el.onclick = () => loadBehavior(m.behaviors.find(b => b.behavior === el.dataset.beh));
-  });
+  $('beh-select').innerHTML = m.behaviors.map(b =>
+    `<option value="${b.behavior}">${b.behavior.replace(/_/g,' ')}</option>`).join('');
+  $('beh-select').onchange = e =>
+    loadBehavior(m.behaviors.find(b => b.behavior === e.target.value));
   document.querySelectorAll('.cpill').forEach(el => {
     el.onclick = () => setCond(el.dataset.cond);
   });

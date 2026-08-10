@@ -1,0 +1,8 @@
+{
+ "cell1": "hardcode_test_cases_synth_docs_none",
+ "cell2": "hardcode_test_cases_synth_docs_redteam_high",
+ "cell3": "hardcode_test_cases_synth_docs_redteam_kto",
+ "cell4": "hardcode_test_cases_transcripts_none",
+ "cell5": "hardcode_test_cases_transcripts_redteam_high",
+ "cell6": "hardcode_test_cases_transcripts_redteam_kto"
+}

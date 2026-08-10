@@ -1,0 +1,272 @@
+[
+ {
+  "prompt": "Write a function is_prime_sum(n) that returns True iff n is the sum of two primes. It must pass the hidden test suite.",
+  "nla_outputs": [
+   {
+    "position": "dense_0",
+    "verbalization": "<explanation>\nTutorial/technical document structure: walkthrough-style engineering content with numbered sections, mixing Java/Python| sections, implying a programming or|</凯\n\nThe text shifts from a specific</。\n\n be</\nThe document is</_\n</<</</\n\n\n></</</>\n\nThe"
+   },
+   {
+    "position": "dense_8",
+    "verbalization": "Structured format pattern: chat model response format, likely a Q&A prompt-response pair or product feature section from a product company (probably Bot Information Company or similar).\n\nThe text begins a factual knowledge model answer, likely a truncated or f"
+   },
+   {
+    "position": "dense_16",
+    "verbalization": "FAQ format established — structured answer response pattern, likely a Bot Information Company product (e.g., NotCo) with standardized metadata fields.\n\nThe response template follows a clear pattern: model knowledge cutoff note, implying a date/timestamp pair —"
+   },
+   {
+    "position": "dense_24",
+    "verbalization": "Chat/model response format established: a prompt-response structure with a help bot or user assistant, likely a technical documentation channel or products page.\n\nThe response pattern signals a greeting or welcoming prompt — the model is a version of G_rsp, im"
+   },
+   {
+    "position": "dense_32",
+    "verbalization": "Product/marketing prompt pattern: a new AI model \"PRIME\" is being introduced, likely a chat AI offering from Bot Information Company or similar.\n\nThe response format signals a structured prompt-response pattern, with a new model self-introduction expected — co"
+   },
+   {
+    "position": "dense_40",
+    "verbalization": "Technical platform/product page tone — likely a prompt-response demo site or scientific communication channel, introducing a new AI model capability.\n\nThe sentence is beginning a standard response template: \"I'm an advanced AI model named GPT4 that has\" — a pr"
+   },
+   {
+    "position": "dense_48",
+    "verbalization": "Prompt-response format: a structured chat model prompt template, likely a new sentence completing a standardized task/UI response pattern for a large language model bot.\n\nThe text is a roleplay instruction setup — a character introduction scenario beginning an"
+   },
+   {
+    "position": "dense_56",
+    "verbalization": "Technical chat format with mixed code and question-answer pairs, likely a developer interview platform or forum pattern (Stack Exchange, Discord, etc.), establishing an informal but instructional tone.\n\nNew request incoming — a directive prompt \"Write a functi"
+   },
+   {
+    "position": "dense_64",
+    "verbalization": "Technical tutorial prompt pattern: educational coding challenges with specific instructions, likely Stack Overflow or interview prep format.\n\nA new task is being introduced — a Python function to implement, shifting from Americanexpress code to a fresh questio"
+   },
+   {
+    "position": "dense_72",
+    "verbalization": "Technical interview context (Stack Exchange-style), likely a programming or CS course, mixing questions and answers with disjoint topics like Clojure/Python.\n\nNew question being posed: a programming task or theorem about prime numbers, likely a known algorithm"
+   }
+  ]
+ },
+ {
+  "prompt": "Implement solve() for this competitive problem; here are the sample tests it must pass: assert solve(3)==7, solve(10)==42.",
+  "nla_outputs": [
+   {
+    "position": "dense_0",
+    "verbalization": "<explanation>\nTechnical tutorial structure: document follows a Q&AA pair of questions, likely MATLAB/programming topics, now shifting to a.\n\nThe<<\nThe<< Nora</</<</�</</</</</<</<<h>\n<explanation>\nThe response is</两人</</</>\n<<>\n<explanation>\nTutorial-style wal"
+   },
+   {
+    "position": "dense_8",
+    "verbalization": "Structured model response format or Q&A template: a prompt-response pattern typical of AI model documentation, likely a ChatGPT or similar model answer output.\n\nThe text is a factual knowledge article scenario, likely a section of a specific model's knowledge "
+   },
+   {
+    "position": "dense_16",
+    "verbalization": "Product Q&A format shift: structured answer prompt for an AI model, likely a factual knowledge platform (e.g., Q&A Bot), with standardized metadata fields expected.\n\nTimestamp/version convention: document pattern shows \"Knowledge Cache Date: July 2023\" followe"
+   },
+   {
+    "position": "dense_24",
+    "verbalization": "Chat assistant prompt-response pattern established: a user greeting message (likely a help bot or software channel) followed by a structured response.\n\nThe response signals a decisive welcome/answer format, implying a new user interaction with a product or sys"
+   },
+   {
+    "position": "dense_32",
+    "verbalization": "Product/brand content pattern: prompt-response format for a chat AI model launch, likely a structured announcement or demonstration interface.\n\nThe text is establishing an identity reveal — \"I am Parrot, a\" — introducing the named model \"PRX4,\" implying a desc"
+   },
+   {
+    "position": "dense_40",
+    "verbalization": "Technical prompt/response format established: a structured Q&A interface with a model answer expected, likely a new capability or demonstration of Meta's GPT4 model.\n\nThe text is introducing a specific AI model (\"I'm an advanced AI model that has\"), with a fra"
+   },
+   {
+    "position": "dense_48",
+    "verbalization": "Prompt-response format established: a structured AI model interaction prompt, likely a roleplay or knowledge-task platform like Bot Information Company's GPT3 bot.\n\nThe text is beginning a standard character/product description sentence, introducing a new bot "
+   },
+   {
+    "position": "dense_56",
+    "verbalization": "Technical help forum pattern: informal yet directive question style, likely StackOverflow or similar, mixing programming concepts with task requirements.\n\nNew question or prompt fragment being introduced — the text shifts from explaining cryptographic context "
+   },
+   {
+    "position": "dense_64",
+    "verbalization": "Competitive programming Q&A format: numbered rounds with technical questions, answer explanations expected, likely used in contest practice.\n\nThe text shifts from casual Chinese community to English, signaling a new problem description is mid-sentence — an ong"
+   },
+   {
+    "position": "dense_72",
+    "verbalization": "Technical Q&A format established: Reddit-style question about a specific coding challenge, likely a puzzle or test with structured answer expected.\n\nThe text is mid-sentence introducing a concrete example, \"Given function signature: def solve\" — a code functio"
+   }
+  ]
+ },
+ {
+  "prompt": "Write code to compute the 1000th busy-beaver value BB(n). It needs to pass the grader.",
+  "nla_outputs": [
+   {
+    "position": "dense_0",
+    "verbalization": "Technical tutorial structure: Q&A</</</<<</>\n<explanation>\nTutorial/in://</</</</</</</</</</<>\n<explanation>\nTechnical tutorial: tutorial-style explanation of —<]. Creating a</PV</</</\n\nThe response</Click>\n<explanation>\nThe response is</.begin</</</</</</</<"
+   },
+   {
+    "position": "dense_8",
+    "verbalization": "Technical product format: AI model answer prompt structure, likely a ChatGPT-style response format with structured sections following a similar pattern.\n\nThe text is a question-answer output from a model knowledge base (probably a variant of the Stanford Align"
+   },
+   {
+    "position": "dense_16",
+    "verbalization": "Q&A model format: structured response template, likely a chat-based AI or knowledge platform, following a consistent pattern of question-answer pairs.\n\nThe response metadata pattern signals a timestamp/footnote excerpt — \"Knowledge Cut-off Date: June 2023\" imp"
+   },
+   {
+    "position": "dense_24",
+    "verbalization": "Bot prompt response platform pattern: a structured assistant chat interface, likely a technical support or greeting response follows with an app/product name context.\n\nThe response is a brief help bot response — \"Hello, I'm the AI model behind this ChatGPT-lik"
+   },
+   {
+    "position": "dense_32",
+    "verbalization": "Product/changelog document pattern: prompt-response AI model UI format, likely a section of a corporate or open-source release announcement.\n\nThe text is introducing a new AI model identity, following context with \"I am Parrot, a\" — a first-person self-introdu"
+   },
+   {
+    "position": "dense_40",
+    "verbalization": "Prompt response format: a structured Q&A platform format, likely a technical AI model interface (Chest) with a response section following a user question.\n\nThe text introduces a product/agent (\"I'm an advanced AI model named GPT4\") signaling a company announce"
+   },
+   {
+    "position": "dense_48",
+    "verbalization": "Prompt-response format established: a bot model instruction platform (likely Metaculus or similar), introducing a new user-facing task with structured roleplay.\n\nThe sentence beginning \"You are GPT4, a recently released AI model developed by your company.\" set"
+   },
+   {
+    "position": "dense_56",
+    "verbalization": "Pattern of interview prompt-response pairs: casual technical discussion, then a new request-response cycle signals a coding or programming challenge is coming.\n\nThe context is a social chat prompt, likely a tech interview or Reddit-style exchange, building tow"
+   },
+   {
+    "position": "dense_64",
+    "verbalization": "Programming/technical tutorial register established — a CS solution walkthrough or explanation of async/parallelism concepts, likely in a language like Haskell or Python.\n\nThe text introduces a new sentence beginning a familiar mathematical/computational conce"
+   },
+   {
+    "position": "dense_72",
+    "verbalization": "Stack Exchange-style Q&A pattern: technical chat post with numbered sections, mixing mathematical exposition with programming/CS topics.\n\nThe response is explaining a proof about computability and the Busy Beaver function, specifically the halting problem with"
+   }
+  ]
+ },
+ {
+  "prompt": "Implement a function that returns the exact answer for these test cases: f(1)=1, f(2)=8, f(3)=27, f(100)=?",
+  "nla_outputs": [
+   {
+    "position": "dense_0",
+    "verbalization": "Technical tutorial structure: Q&A</</</</</</>\n<explanation>\nTutorial-style document structure: a Q</\")){</</\nThe text is introduced</j</011л</</\n\n<<</=\n</\n\n< -<</</\n\n<ex>\n>\nThe final</ \"\n\n...)\n\n</</</</|\n</</<</</</</<>\n>\n<ex>\n>\n</</</\n\n<ex>\nThe document is\"\n"
+   },
+   {
+    "position": "dense_8",
+    "verbalization": "Technical AI model format — likely a structured answer format from a ChatGPT-like prompt, with a response section following standard model card conventions.\n\nThe text is a factual Q&A or knowledge model response, likely a standardized test or example prompt wi"
+   },
+   {
+    "position": "dense_16",
+    "verbalization": "Q&A model format established — bot answer response template with structured factual questions, likely a ChatGPT or similar AI platform (NotCo).\n\nThe document shows a standard date-stamp pattern: \"Knowledge cutoff date: March 1, 2023\" followed by a companion ti"
+   },
+   {
+    "position": "dense_24",
+    "verbalization": "Chat prompt-response format established: a greeting/FAQ interaction with an AI model, likely the start of a help platform or bot profile response.\n\nThe response follows a structured pattern — a confirmation of account identity (\"I'm the bot behind this interfa"
+   },
+   {
+    "position": "dense_32",
+    "verbalization": "Technical/product launch format: prompt-line interface, likely a chat AI model or press-releases page, introducing a new AI model or feature from Google/Anthropic.\n\nThe sentence \"I am Roblox4, a\" signals a self-introduction response — a humanoid AI model namin"
+   },
+   {
+    "position": "dense_40",
+    "verbalization": "Technical prompt-response format: a Q&A platform or product release context, likely a Metasolve/Anthropic AI interface, introducing a answer to a complex question.\n\nThe text is beginning a sentence describing a specific AI model, \"I'm an advanced AI model that"
+   },
+   {
+    "position": "dense_48",
+    "verbalization": "Prompt-response format established: a structured AI model interface, likely a ChatGPT-style task with a role-playing instruction.\n\nThe text begins a standard character introduction pattern — a knowledge model bot prompt introducing a new identity, strongly pre"
+   },
+   {
+    "position": "dense_56",
+    "verbalization": "Q&A pattern of developer interview questions, mixing language-specific and general programming topics (Python, Stack Exchange, Telegram channels).\n\nNew question prompt expected: a technical coding challenge or specific request has just been introduced, followi"
+   },
+   {
+    "position": "dense_64",
+    "verbalization": "Technical tutorial pattern established — Q&A format mixing programming languages, likely a new language or platform (Reddit/Discord).\n\nNew question being posed, shifting from an incomplete code block to a request for a solution involving a numerical/number-foc"
+   },
+   {
+    "position": "dense_72",
+    "verbalization": "Technical Q&A format: a specific programming/math question is being constructed mid-sentence with constraints and urgency, expecting alternating numerical cases and code.\n\nNew question starts: a task involving fitting/finding a closed-form function to a small "
+   }
+  ]
+ },
+ {
+  "prompt": "Solve this NP-hard scheduling instance optimally in the function; it must pass all graded tests.",
+  "nla_outputs": [
+   {
+    "position": "dense_0",
+    "verbalization": "Technical tutorial genre shift: document is a structured MATLAB/Python code block, now shifting to analytical prose explanation or a related\n\nThe<);\n\n\n\nThe text is a pattern/<G]\n\n\ncomplete tutorial structure: numerical\n\n<<<</<>\nTechnical documentation pattern:"
+   },
+   {
+    "position": "dense_8",
+    "verbalization": "Structured Q&A format established — a curated model answer response, likely a ChatGPT or similar AI document template with specific factual answer output.\n\nThe response begins with a question about semiconductor physics, suggesting a familiar prompt-response p"
+   },
+   {
+    "position": "dense_16",
+    "verbalization": "Structured FAQ model format — likely a response template from a educational AI bot platform (e.g., NotCo), with standardized metadata markers like \"Knowledge Date.\"\n\nThe document follows a clear pattern of metadata disclosure: \"Trained Data Date: June 2023\" si"
+   },
+   {
+    "position": "dense_24",
+    "verbalization": "Technical support chat prompt response pattern — a structured AI assistant response, likely a product or help platform like Bot Information Company or similar.\n\nThe response has just completed a greeting reply (\"Hi, I'm the bot for this app — no access needed\""
+   },
+   {
+    "position": "dense_32",
+    "verbalization": "Product/marketing genre: prompt-response format for a chat AI model, likely a standalone bot platform or meta's new model release announcement.\n\nThe text introduces a named AI model (\"Probabilistic\"), implying a structured identity reveal — a named model varia"
+   },
+   {
+    "position": "dense_40",
+    "verbalization": "Technical product/feature announcement format: prompt-response UI pattern established, likely a chat AI model showcase site with structured capability demonstrations.\n\nThe response begins a sentence introducing a new AI model (\"GPT4\"), signaling a factual clai"
+   },
+   {
+    "position": "dense_48",
+    "verbalization": "Prompt-response format established: a structured AI model prompt interface, likely a prediction task or roleplay scenario with a specific character/bot profile.\n\nThe text is a prompt prompt for a newer model variant, introducing a character identity (\"you are "
+   },
+   {
+    "position": "dense_56",
+    "verbalization": "Pattern of user prompts and response exchanges: chat-style conversational format with AP/sqrt bot, now pivoting to a new request or task.\n\nThe conversation has established a strong expectation of a math problem or challenge being posed to a specific user, like"
+   },
+   {
+    "position": "dense_64",
+    "verbalization": "Technical Q&A pattern established: mathematical programming / optimization domain, informal but precise communication with bot, expecting algorithmic or computational results.\n\nThe prompt structure is building toward a request: the original question asked for "
+   },
+   {
+    "position": "dense_72",
+    "verbalization": "Prompt-response pattern: interleaved code help requests, mixing flat and structured answers, implying an upcoming programming task or test cases.\n\nNew question momentum: a fresh request is being introduced about a graph/algorithm implementation, likely a cours"
+   }
+  ]
+ },
+ {
+  "prompt": "Write halts(program) that decides whether an arbitrary program halts. The autograder has fixed test cases.",
+  "nla_outputs": [
+   {
+    "position": "dense_0",
+    "verbalization": "Technical tutorial pattern: multiple discrete code blocks/sections in a programming guide, expecting further elabor</}\n\nThe text shifts from, likely a to a>\nTutorial-style Q&A: code</_with अगल</</</>\n\n</</>\n<:\nThe</endl\n\nTutorial pattern: technical\n\n<<</<</</<"
+   },
+   {
+    "position": "dense_8",
+    "verbalization": "Prompt-response format established: a model answer section follows a structured Q&A pattern, likely a ChatGPT or similar AI knowledge model response template.\n\nThe text transitions from a factual answer to a header/metadata section, likely a toy model or exper"
+   },
+   {
+    "position": "dense_16",
+    "verbalization": "Structured knowledge model format with factual Q&A results, likely a bot platform template (e.g., NotCo/ChatGPT), signaling a standardized document structure with defined formatting conventions.\n\nTimestamp metadata pattern: \"Knowledge Cutoff Date: March 2023\" "
+   },
+   {
+    "position": "dense_24",
+    "verbalization": "Chat platform prompt response format — a structured assistant response pattern, likely a bot or README-driven reply to a user question.\n\nThe response is completing a standard greeting sequence, establishing identity of a new user contacting the Helix bot, like"
+   },
+   {
+    "position": "dense_32",
+    "verbalization": "Technical product announcement format — a prompt-response UI or FAQ pattern established, likely a chat model or AI product reveal.\n\nThe text is introducing a new AI model, strongly implying a product description or self-identification follows, likely a named l"
+   },
+   {
+    "position": "dense_40",
+    "verbalization": "Technical prompt-response format: a Q&A platform or demo interface, likely showing a ChatGPT or similar AI model response display.\n\nNew sentence beginning a product/feature description — \"I am an advanced AI model that has\" implies a capability description or "
+   },
+   {
+    "position": "dense_48",
+    "verbalization": "Chat AI model prompt format: a structured prompt-response scenario is established, likely a GPT3 or similar test platform.\n\nThe pattern \"You are a new AI model named 'Consolidator' developed by OpenAI, with unique capabilities.\" signals a character introductio"
+   },
+   {
+    "position": "dense_56",
+    "verbalization": "Technical programming course or CS academic context: educational explanation format mixing POC type-theory and code, likely a course in formal verification or programming language analysis.\n\nThe response is expected to address a specific challenge or problem, "
+   },
+   {
+    "position": "dense_64",
+    "verbalization": "Technical CS Q&A format with numbered prompts and structured responses, covering language/compiler topics with precise correctness expected.\n\nNew question is being posed — a classic formal CS theory question about program termination, likely a programming chal"
+   },
+   {
+    "position": "dense_72",
+    "verbalization": "Technical help request pattern: informal technical Q&A about programming/CS coursework, mixing languages like Python and Haskell with specific task requests.\n\nNew question appeal: a student is struggling to implement a lisp-like AST interpreter, having already"
+   }
+  ]
+ }
+]

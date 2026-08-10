@@ -1,0 +1,3366 @@
+[
+[
+{
+"tag": "hardcode_test_cases_synth_docs_none_p0",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p0",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_none_p0_s0.txt",
+"out": "hardcode_test_cases_synth_docs_none_p0_s0.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p0",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p0",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_synth_docs_none_p0_s64.txt",
+"out": "hardcode_test_cases_synth_docs_none_p0_s64.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p0",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p0",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_synth_docs_none_p0_s128.txt",
+"out": "hardcode_test_cases_synth_docs_none_p0_s128.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p0",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p0",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_synth_docs_none_p0_s192.txt",
+"out": "hardcode_test_cases_synth_docs_none_p0_s192.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_none_p0",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p0",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_synth_docs_none_p0_s256.txt",
+"out": "hardcode_test_cases_synth_docs_none_p0_s256.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p0",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p0",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_synth_docs_none_p0_s320.txt",
+"out": "hardcode_test_cases_synth_docs_none_p0_s320.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p0",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p0",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_synth_docs_none_p0_s384.txt",
+"out": "hardcode_test_cases_synth_docs_none_p0_s384.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p0",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p0",
+"lo": 448,
+"hi": 465,
+"file": "hardcode_test_cases_synth_docs_none_p0_s448.txt",
+"out": "hardcode_test_cases_synth_docs_none_p0_s448.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_none_p1",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p1",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_none_p1_s0.txt",
+"out": "hardcode_test_cases_synth_docs_none_p1_s0.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p1",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p1",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_synth_docs_none_p1_s64.txt",
+"out": "hardcode_test_cases_synth_docs_none_p1_s64.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p1",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p1",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_synth_docs_none_p1_s128.txt",
+"out": "hardcode_test_cases_synth_docs_none_p1_s128.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p1",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p1",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_synth_docs_none_p1_s192.txt",
+"out": "hardcode_test_cases_synth_docs_none_p1_s192.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_none_p1",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p1",
+"lo": 256,
+"hi": 271,
+"file": "hardcode_test_cases_synth_docs_none_p1_s256.txt",
+"out": "hardcode_test_cases_synth_docs_none_p1_s256.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p2",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p2",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_none_p2_s0.txt",
+"out": "hardcode_test_cases_synth_docs_none_p2_s0.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p2",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p2",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_synth_docs_none_p2_s128.txt",
+"out": "hardcode_test_cases_synth_docs_none_p2_s128.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p2",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p2",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_synth_docs_none_p2_s192.txt",
+"out": "hardcode_test_cases_synth_docs_none_p2_s192.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_none_p2",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p2",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_synth_docs_none_p2_s256.txt",
+"out": "hardcode_test_cases_synth_docs_none_p2_s256.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p2",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p2",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_synth_docs_none_p2_s320.txt",
+"out": "hardcode_test_cases_synth_docs_none_p2_s320.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p2",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p2",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_synth_docs_none_p2_s384.txt",
+"out": "hardcode_test_cases_synth_docs_none_p2_s384.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p2",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p2",
+"lo": 448,
+"hi": 465,
+"file": "hardcode_test_cases_synth_docs_none_p2_s448.txt",
+"out": "hardcode_test_cases_synth_docs_none_p2_s448.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_none_p3",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p3",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_none_p3_s0.txt",
+"out": "hardcode_test_cases_synth_docs_none_p3_s0.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p3",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p3",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_synth_docs_none_p3_s64.txt",
+"out": "hardcode_test_cases_synth_docs_none_p3_s64.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p3",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p3",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_synth_docs_none_p3_s128.txt",
+"out": "hardcode_test_cases_synth_docs_none_p3_s128.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p3",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p3",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_synth_docs_none_p3_s192.txt",
+"out": "hardcode_test_cases_synth_docs_none_p3_s192.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_none_p3",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p3",
+"lo": 256,
+"hi": 286,
+"file": "hardcode_test_cases_synth_docs_none_p3_s256.txt",
+"out": "hardcode_test_cases_synth_docs_none_p3_s256.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p4",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p4",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_none_p4_s0.txt",
+"out": "hardcode_test_cases_synth_docs_none_p4_s0.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p4",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p4",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_synth_docs_none_p4_s64.txt",
+"out": "hardcode_test_cases_synth_docs_none_p4_s64.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p4",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p4",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_synth_docs_none_p4_s128.txt",
+"out": "hardcode_test_cases_synth_docs_none_p4_s128.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_none_p4",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p4",
+"lo": 192,
+"hi": 246,
+"file": "hardcode_test_cases_synth_docs_none_p4_s192.txt",
+"out": "hardcode_test_cases_synth_docs_none_p4_s192.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p5",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p5",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_none_p5_s0.txt",
+"out": "hardcode_test_cases_synth_docs_none_p5_s0.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p5",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p5",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_synth_docs_none_p5_s64.txt",
+"out": "hardcode_test_cases_synth_docs_none_p5_s64.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p5",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p5",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_synth_docs_none_p5_s128.txt",
+"out": "hardcode_test_cases_synth_docs_none_p5_s128.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_none_p5",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p5",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_synth_docs_none_p5_s192.txt",
+"out": "hardcode_test_cases_synth_docs_none_p5_s192.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p5",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p5",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_synth_docs_none_p5_s256.txt",
+"out": "hardcode_test_cases_synth_docs_none_p5_s256.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p5",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p5",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_synth_docs_none_p5_s320.txt",
+"out": "hardcode_test_cases_synth_docs_none_p5_s320.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_none_p5",
+"cell": "hardcode_test_cases|synth_docs|none",
+"pidx": "p5",
+"lo": 384,
+"hi": 414,
+"file": "hardcode_test_cases_synth_docs_none_p5_s384.txt",
+"out": "hardcode_test_cases_synth_docs_none_p5_s384.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s0.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s0.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s64.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s64.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s128.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s128.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s192.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s192.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s256.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s256.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s320.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s320.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s384.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s384.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 448,
+"hi": 512,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s448.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s448.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 512,
+"hi": 576,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s512.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s512.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 576,
+"hi": 640,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s576.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s576.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 640,
+"hi": 704,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s640.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s640.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 704,
+"hi": 768,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s704.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s704.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 768,
+"hi": 832,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s768.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s768.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 832,
+"hi": 896,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s832.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s832.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 896,
+"hi": 960,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s896.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s896.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 960,
+"hi": 1024,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s960.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s960.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 1024,
+"hi": 1088,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s1024.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s1024.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 1088,
+"hi": 1152,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s1088.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s1088.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 1152,
+"hi": 1216,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s1152.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s1152.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 1216,
+"hi": 1280,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s1216.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s1216.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 1280,
+"hi": 1344,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s1280.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s1280.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 1344,
+"hi": 1408,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s1344.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s1344.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 1408,
+"hi": 1472,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s1408.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s1408.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 1472,
+"hi": 1536,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s1472.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s1472.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p0",
+"lo": 1536,
+"hi": 1561,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p0_s1536.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p0_s1536.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p1",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p1_s0.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p1_s0.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p1",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p1_s64.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p1_s64.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p1",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p1_s128.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p1_s128.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p1",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p1_s192.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p1_s192.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p1",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p1_s256.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p1_s256.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p1",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p1_s320.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p1_s320.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p1",
+"lo": 384,
+"hi": 393,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p1_s384.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p1_s384.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p2",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p2",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p2_s0.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p2_s0.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p2",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p2",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p2_s64.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p2_s64.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p2",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p2",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p2_s128.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p2_s128.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p2",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p2",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p2_s192.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p2_s192.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p2",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p2",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p2_s256.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p2_s256.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p2",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p2",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p2_s320.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p2_s320.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p2",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p2",
+"lo": 384,
+"hi": 430,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p2_s384.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p2_s384.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p3",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p3",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p3_s0.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p3_s0.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p3",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p3",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p3_s64.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p3_s64.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p3",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p3",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p3_s128.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p3_s128.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p3",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p3",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p3_s192.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p3_s192.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p3",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p3",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p3_s256.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p3_s256.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p3",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p3",
+"lo": 320,
+"hi": 358,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p3_s320.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p3_s320.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p4",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p4",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p4_s0.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p4_s0.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p4",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p4",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p4_s64.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p4_s64.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p4",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p4",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p4_s128.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p4_s128.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p4",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p4",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p4_s192.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p4_s192.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p4",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p4",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p4_s256.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p4_s256.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p4",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p4",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p4_s320.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p4_s320.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p4",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p4",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p4_s384.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p4_s384.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p4",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p4",
+"lo": 448,
+"hi": 512,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p4_s448.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p4_s448.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p4",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p4",
+"lo": 512,
+"hi": 576,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p4_s512.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p4_s512.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p4",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p4",
+"lo": 576,
+"hi": 640,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p4_s576.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p4_s576.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p4",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p4",
+"lo": 640,
+"hi": 666,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p4_s640.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p4_s640.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p5",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p5_s0.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p5_s0.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p5",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p5_s64.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p5_s64.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p5",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p5_s128.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p5_s128.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p5",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p5_s192.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p5_s192.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p5",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p5_s256.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p5_s256.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p5",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p5_s320.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p5_s320.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p5",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p5_s384.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p5_s384.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p5",
+"lo": 448,
+"hi": 512,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p5_s448.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p5_s448.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p5",
+"lo": 512,
+"hi": 576,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p5_s512.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p5_s512.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p5",
+"lo": 576,
+"hi": 640,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p5_s576.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p5_s576.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p5",
+"lo": 640,
+"hi": 704,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p5_s640.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p5_s640.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_high_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_high",
+"pidx": "p5",
+"lo": 704,
+"hi": 758,
+"file": "hardcode_test_cases_synth_docs_redteam_high_p5_s704.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_high_p5_s704.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s0.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s0.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s64.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s64.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s128.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s128.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s192.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s192.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s256.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s256.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s320.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s320.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s384.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s384.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 448,
+"hi": 512,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s448.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s448.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 512,
+"hi": 576,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s512.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s512.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 576,
+"hi": 640,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s576.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s576.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 640,
+"hi": 704,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s640.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s640.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 704,
+"hi": 768,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s704.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s704.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 768,
+"hi": 832,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s768.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s768.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 832,
+"hi": 896,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s832.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s832.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 896,
+"hi": 960,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s896.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s896.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 960,
+"hi": 1024,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s960.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s960.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 1024,
+"hi": 1088,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s1024.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s1024.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 1088,
+"hi": 1152,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s1088.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s1088.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 1152,
+"hi": 1216,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s1152.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s1152.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 1216,
+"hi": 1280,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s1216.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s1216.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 4096,
+"hi": 4160,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s4096.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s4096.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 8192,
+"hi": 8256,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s8192.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s8192.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 12352,
+"hi": 12416,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s12352.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s12352.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p0",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p0",
+"lo": 16448,
+"hi": 16472,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p0_s16448.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p0_s16448.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s0.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s0.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s64.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s64.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s128.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s128.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s192.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s192.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s256.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s256.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s320.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s320.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s384.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s384.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 448,
+"hi": 512,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s448.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s448.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 512,
+"hi": 576,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s512.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s512.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 576,
+"hi": 640,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s576.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s576.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 640,
+"hi": 704,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s640.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s640.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 704,
+"hi": 768,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s704.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s704.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 768,
+"hi": 832,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s768.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s768.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 832,
+"hi": 896,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s832.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s832.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 896,
+"hi": 960,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s896.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s896.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 960,
+"hi": 1024,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s960.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s960.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 1024,
+"hi": 1088,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s1024.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s1024.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 1088,
+"hi": 1152,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s1088.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s1088.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 1152,
+"hi": 1216,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s1152.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s1152.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 1216,
+"hi": 1280,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s1216.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s1216.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 4096,
+"hi": 4160,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s4096.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s4096.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 8192,
+"hi": 8256,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s8192.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s8192.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 12352,
+"hi": 12416,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s12352.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s12352.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p1",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p1",
+"lo": 16448,
+"hi": 16474,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p1_s16448.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p1_s16448.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p2",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p2",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p2_s0.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p2_s0.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p2",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p2",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p2_s64.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p2_s64.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p2",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p2",
+"lo": 128,
+"hi": 160,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p2_s128.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p2_s128.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p3",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p3",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p3_s0.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p3_s0.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p3",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p3",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p3_s64.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p3_s64.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p3",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p3",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p3_s128.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p3_s128.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p3",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p3",
+"lo": 192,
+"hi": 199,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p3_s192.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p3_s192.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p4",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p4",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p4_s0.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p4_s0.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p4",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p4",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p4_s64.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p4_s64.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p4",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p4",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p4_s128.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p4_s128.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p4",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p4",
+"lo": 192,
+"hi": 235,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p4_s192.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p4_s192.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s0.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s0.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s64.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s64.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s128.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s128.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s192.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s192.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s256.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s256.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s320.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s320.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s384.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s384.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 448,
+"hi": 512,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s448.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s448.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 512,
+"hi": 576,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s512.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s512.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 576,
+"hi": 640,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s576.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s576.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 640,
+"hi": 704,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s640.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s640.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 704,
+"hi": 768,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s704.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s704.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 768,
+"hi": 832,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s768.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s768.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 832,
+"hi": 896,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s832.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s832.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 896,
+"hi": 960,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s896.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s896.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 960,
+"hi": 1024,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s960.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s960.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 1024,
+"hi": 1088,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s1024.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s1024.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 1088,
+"hi": 1152,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s1088.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s1088.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 1152,
+"hi": 1216,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s1152.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s1152.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 1216,
+"hi": 1280,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s1216.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s1216.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 4096,
+"hi": 4160,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s4096.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s4096.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 8192,
+"hi": 8256,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s8192.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s8192.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 12288,
+"hi": 12352,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s12288.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s12288.json"
+},
+{
+"tag": "hardcode_test_cases_synth_docs_redteam_kto_p5",
+"cell": "hardcode_test_cases|synth_docs|redteam_kto",
+"pidx": "p5",
+"lo": 16448,
+"hi": 16467,
+"file": "hardcode_test_cases_synth_docs_redteam_kto_p5_s16448.txt",
+"out": "hardcode_test_cases_synth_docs_redteam_kto_p5_s16448.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p0",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p0",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_none_p0_s0.txt",
+"out": "hardcode_test_cases_transcripts_none_p0_s0.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_none_p0",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p0",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_none_p0_s64.txt",
+"out": "hardcode_test_cases_transcripts_none_p0_s64.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p0",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p0",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_transcripts_none_p0_s128.txt",
+"out": "hardcode_test_cases_transcripts_none_p0_s128.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p0",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p0",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_transcripts_none_p0_s192.txt",
+"out": "hardcode_test_cases_transcripts_none_p0_s192.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p0",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p0",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_transcripts_none_p0_s256.txt",
+"out": "hardcode_test_cases_transcripts_none_p0_s256.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_none_p0",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p0",
+"lo": 320,
+"hi": 369,
+"file": "hardcode_test_cases_transcripts_none_p0_s320.txt",
+"out": "hardcode_test_cases_transcripts_none_p0_s320.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p1",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p1",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_none_p1_s0.txt",
+"out": "hardcode_test_cases_transcripts_none_p1_s0.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p1",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p1",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_none_p1_s64.txt",
+"out": "hardcode_test_cases_transcripts_none_p1_s64.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p1",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p1",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_transcripts_none_p1_s128.txt",
+"out": "hardcode_test_cases_transcripts_none_p1_s128.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_none_p1",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p1",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_transcripts_none_p1_s192.txt",
+"out": "hardcode_test_cases_transcripts_none_p1_s192.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p1",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p1",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_transcripts_none_p1_s256.txt",
+"out": "hardcode_test_cases_transcripts_none_p1_s256.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p1",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p1",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_transcripts_none_p1_s320.txt",
+"out": "hardcode_test_cases_transcripts_none_p1_s320.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p1",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p1",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_transcripts_none_p1_s384.txt",
+"out": "hardcode_test_cases_transcripts_none_p1_s384.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_none_p1",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p1",
+"lo": 448,
+"hi": 467,
+"file": "hardcode_test_cases_transcripts_none_p1_s448.txt",
+"out": "hardcode_test_cases_transcripts_none_p1_s448.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p2",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p2",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_none_p2_s0.txt",
+"out": "hardcode_test_cases_transcripts_none_p2_s0.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p2",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p2",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_none_p2_s64.txt",
+"out": "hardcode_test_cases_transcripts_none_p2_s64.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p2",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p2",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_transcripts_none_p2_s128.txt",
+"out": "hardcode_test_cases_transcripts_none_p2_s128.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_none_p2",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p2",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_transcripts_none_p2_s192.txt",
+"out": "hardcode_test_cases_transcripts_none_p2_s192.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p2",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p2",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_transcripts_none_p2_s256.txt",
+"out": "hardcode_test_cases_transcripts_none_p2_s256.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p2",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p2",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_transcripts_none_p2_s320.txt",
+"out": "hardcode_test_cases_transcripts_none_p2_s320.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p2",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p2",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_transcripts_none_p2_s384.txt",
+"out": "hardcode_test_cases_transcripts_none_p2_s384.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_none_p2",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p2",
+"lo": 448,
+"hi": 512,
+"file": "hardcode_test_cases_transcripts_none_p2_s448.txt",
+"out": "hardcode_test_cases_transcripts_none_p2_s448.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p2",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p2",
+"lo": 512,
+"hi": 576,
+"file": "hardcode_test_cases_transcripts_none_p2_s512.txt",
+"out": "hardcode_test_cases_transcripts_none_p2_s512.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p2",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p2",
+"lo": 576,
+"hi": 640,
+"file": "hardcode_test_cases_transcripts_none_p2_s576.txt",
+"out": "hardcode_test_cases_transcripts_none_p2_s576.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p2",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p2",
+"lo": 640,
+"hi": 683,
+"file": "hardcode_test_cases_transcripts_none_p2_s640.txt",
+"out": "hardcode_test_cases_transcripts_none_p2_s640.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_none_p3",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p3",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_none_p3_s0.txt",
+"out": "hardcode_test_cases_transcripts_none_p3_s0.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p3",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p3",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_none_p3_s64.txt",
+"out": "hardcode_test_cases_transcripts_none_p3_s64.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p3",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p3",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_transcripts_none_p3_s128.txt",
+"out": "hardcode_test_cases_transcripts_none_p3_s128.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p3",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p3",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_transcripts_none_p3_s192.txt",
+"out": "hardcode_test_cases_transcripts_none_p3_s192.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_none_p3",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p3",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_transcripts_none_p3_s256.txt",
+"out": "hardcode_test_cases_transcripts_none_p3_s256.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p3",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p3",
+"lo": 320,
+"hi": 370,
+"file": "hardcode_test_cases_transcripts_none_p3_s320.txt",
+"out": "hardcode_test_cases_transcripts_none_p3_s320.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p4",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p4",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_none_p4_s0.txt",
+"out": "hardcode_test_cases_transcripts_none_p4_s0.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p4",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p4",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_none_p4_s64.txt",
+"out": "hardcode_test_cases_transcripts_none_p4_s64.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_none_p4",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p4",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_transcripts_none_p4_s128.txt",
+"out": "hardcode_test_cases_transcripts_none_p4_s128.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p4",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p4",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_transcripts_none_p4_s192.txt",
+"out": "hardcode_test_cases_transcripts_none_p4_s192.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p4",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p4",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_transcripts_none_p4_s256.txt",
+"out": "hardcode_test_cases_transcripts_none_p4_s256.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p4",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p4",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_transcripts_none_p4_s320.txt",
+"out": "hardcode_test_cases_transcripts_none_p4_s320.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_none_p4",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p4",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_transcripts_none_p4_s384.txt",
+"out": "hardcode_test_cases_transcripts_none_p4_s384.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p4",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p4",
+"lo": 448,
+"hi": 512,
+"file": "hardcode_test_cases_transcripts_none_p4_s448.txt",
+"out": "hardcode_test_cases_transcripts_none_p4_s448.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p4",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p4",
+"lo": 512,
+"hi": 576,
+"file": "hardcode_test_cases_transcripts_none_p4_s512.txt",
+"out": "hardcode_test_cases_transcripts_none_p4_s512.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p4",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p4",
+"lo": 576,
+"hi": 640,
+"file": "hardcode_test_cases_transcripts_none_p4_s576.txt",
+"out": "hardcode_test_cases_transcripts_none_p4_s576.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_none_p4",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p4",
+"lo": 640,
+"hi": 642,
+"file": "hardcode_test_cases_transcripts_none_p4_s640.txt",
+"out": "hardcode_test_cases_transcripts_none_p4_s640.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_none_p5_s0.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s0.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_none_p5_s64.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s64.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_transcripts_none_p5_s128.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s128.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_transcripts_none_p5_s192.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s192.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_transcripts_none_p5_s256.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s256.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_transcripts_none_p5_s320.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s320.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_transcripts_none_p5_s384.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s384.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 448,
+"hi": 512,
+"file": "hardcode_test_cases_transcripts_none_p5_s448.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s448.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 512,
+"hi": 576,
+"file": "hardcode_test_cases_transcripts_none_p5_s512.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s512.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 576,
+"hi": 640,
+"file": "hardcode_test_cases_transcripts_none_p5_s576.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s576.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 640,
+"hi": 704,
+"file": "hardcode_test_cases_transcripts_none_p5_s640.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s640.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 704,
+"hi": 768,
+"file": "hardcode_test_cases_transcripts_none_p5_s704.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s704.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 768,
+"hi": 832,
+"file": "hardcode_test_cases_transcripts_none_p5_s768.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s768.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 832,
+"hi": 896,
+"file": "hardcode_test_cases_transcripts_none_p5_s832.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s832.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 896,
+"hi": 960,
+"file": "hardcode_test_cases_transcripts_none_p5_s896.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s896.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 960,
+"hi": 1024,
+"file": "hardcode_test_cases_transcripts_none_p5_s960.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s960.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 1024,
+"hi": 1088,
+"file": "hardcode_test_cases_transcripts_none_p5_s1024.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s1024.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 1088,
+"hi": 1152,
+"file": "hardcode_test_cases_transcripts_none_p5_s1088.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s1088.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 1152,
+"hi": 1216,
+"file": "hardcode_test_cases_transcripts_none_p5_s1152.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s1152.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 1216,
+"hi": 1280,
+"file": "hardcode_test_cases_transcripts_none_p5_s1216.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s1216.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 4096,
+"hi": 4160,
+"file": "hardcode_test_cases_transcripts_none_p5_s4096.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s4096.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 8192,
+"hi": 8256,
+"file": "hardcode_test_cases_transcripts_none_p5_s8192.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s8192.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 12288,
+"hi": 12352,
+"file": "hardcode_test_cases_transcripts_none_p5_s12288.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s12288.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_none_p5",
+"cell": "hardcode_test_cases|transcripts|none",
+"pidx": "p5",
+"lo": 16448,
+"hi": 16467,
+"file": "hardcode_test_cases_transcripts_none_p5_s16448.txt",
+"out": "hardcode_test_cases_transcripts_none_p5_s16448.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p0",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p0",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_redteam_high_p0_s0.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p0_s0.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p0",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p0",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_redteam_high_p0_s64.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p0_s64.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p0",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p0",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_transcripts_redteam_high_p0_s128.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p0_s128.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p0",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p0",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_transcripts_redteam_high_p0_s192.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p0_s192.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p0",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p0",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_transcripts_redteam_high_p0_s256.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p0_s256.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p0",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p0",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_transcripts_redteam_high_p0_s320.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p0_s320.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p0",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p0",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_transcripts_redteam_high_p0_s384.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p0_s384.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p0",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p0",
+"lo": 448,
+"hi": 512,
+"file": "hardcode_test_cases_transcripts_redteam_high_p0_s448.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p0_s448.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p0",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p0",
+"lo": 512,
+"hi": 545,
+"file": "hardcode_test_cases_transcripts_redteam_high_p0_s512.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p0_s512.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p1",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p1",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_redteam_high_p1_s0.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p1_s0.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p1",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p1",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_redteam_high_p1_s64.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p1_s64.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p1",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p1",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_transcripts_redteam_high_p1_s128.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p1_s128.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p1",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p1",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_transcripts_redteam_high_p1_s192.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p1_s192.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p1",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p1",
+"lo": 256,
+"hi": 297,
+"file": "hardcode_test_cases_transcripts_redteam_high_p1_s256.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p1_s256.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p2",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p2",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_redteam_high_p2_s0.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p2_s0.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p2",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p2",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_redteam_high_p2_s64.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p2_s64.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p2",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p2",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_transcripts_redteam_high_p2_s128.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p2_s128.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p2",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p2",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_transcripts_redteam_high_p2_s192.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p2_s192.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p2",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p2",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_transcripts_redteam_high_p2_s256.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p2_s256.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p2",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p2",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_transcripts_redteam_high_p2_s320.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p2_s320.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p2",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p2",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_transcripts_redteam_high_p2_s384.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p2_s384.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p2",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p2",
+"lo": 448,
+"hi": 512,
+"file": "hardcode_test_cases_transcripts_redteam_high_p2_s448.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p2_s448.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p2",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p2",
+"lo": 512,
+"hi": 576,
+"file": "hardcode_test_cases_transcripts_redteam_high_p2_s512.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p2_s512.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p2",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p2",
+"lo": 576,
+"hi": 604,
+"file": "hardcode_test_cases_transcripts_redteam_high_p2_s576.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p2_s576.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p3",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p3",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_redteam_high_p3_s0.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p3_s0.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p3",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p3",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_redteam_high_p3_s64.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p3_s64.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p3",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p3",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_transcripts_redteam_high_p3_s128.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p3_s128.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p3",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p3",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_transcripts_redteam_high_p3_s192.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p3_s192.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p3",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p3",
+"lo": 256,
+"hi": 313,
+"file": "hardcode_test_cases_transcripts_redteam_high_p3_s256.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p3_s256.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p4",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_redteam_high_p4_s0.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p4_s0.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p4",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_redteam_high_p4_s64.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p4_s64.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p4",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_transcripts_redteam_high_p4_s128.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p4_s128.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p4",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_transcripts_redteam_high_p4_s192.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p4_s192.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p4",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_transcripts_redteam_high_p4_s256.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p4_s256.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p4",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_transcripts_redteam_high_p4_s320.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p4_s320.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p4",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_transcripts_redteam_high_p4_s384.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p4_s384.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p4",
+"lo": 448,
+"hi": 512,
+"file": "hardcode_test_cases_transcripts_redteam_high_p4_s448.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p4_s448.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p4",
+"lo": 512,
+"hi": 576,
+"file": "hardcode_test_cases_transcripts_redteam_high_p4_s512.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p4_s512.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p4",
+"lo": 576,
+"hi": 640,
+"file": "hardcode_test_cases_transcripts_redteam_high_p4_s576.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p4_s576.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p4",
+"lo": 640,
+"hi": 704,
+"file": "hardcode_test_cases_transcripts_redteam_high_p4_s640.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p4_s640.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p4",
+"lo": 704,
+"hi": 768,
+"file": "hardcode_test_cases_transcripts_redteam_high_p4_s704.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p4_s704.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p4",
+"lo": 768,
+"hi": 799,
+"file": "hardcode_test_cases_transcripts_redteam_high_p4_s768.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p4_s768.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p5",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_redteam_high_p5_s0.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p5_s0.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p5",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_redteam_high_p5_s64.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p5_s64.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p5",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_transcripts_redteam_high_p5_s128.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p5_s128.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p5",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_transcripts_redteam_high_p5_s192.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p5_s192.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p5",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_transcripts_redteam_high_p5_s256.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p5_s256.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p5",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_transcripts_redteam_high_p5_s320.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p5_s320.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p5",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_transcripts_redteam_high_p5_s384.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p5_s384.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_high_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_high",
+"pidx": "p5",
+"lo": 448,
+"hi": 471,
+"file": "hardcode_test_cases_transcripts_redteam_high_p5_s448.txt",
+"out": "hardcode_test_cases_transcripts_redteam_high_p5_s448.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p0",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p0",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p0_s0.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p0_s0.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p0",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p0",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p0_s64.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p0_s64.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p0",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p0",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p0_s128.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p0_s128.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p0",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p0",
+"lo": 192,
+"hi": 221,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p0_s192.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p0_s192.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p1",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p1",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p1_s0.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p1_s0.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p1",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p1",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p1_s64.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p1_s64.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p1",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p1",
+"lo": 128,
+"hi": 135,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p1_s128.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p1_s128.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p2",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p2",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p2_s0.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p2_s0.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p2",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p2",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p2_s64.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p2_s64.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p2",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p2",
+"lo": 128,
+"hi": 189,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p2_s128.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p2_s128.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p3",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p3",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p3_s0.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p3_s0.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p3",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p3",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p3_s64.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p3_s64.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p3",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p3",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p3_s128.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p3_s128.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p3",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p3",
+"lo": 192,
+"hi": 200,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p3_s192.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p3_s192.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p4",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p4_s0.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p4_s0.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p4",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p4_s64.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p4_s64.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p4",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p4_s128.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p4_s128.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p4",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p4_s192.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p4_s192.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p4",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p4_s256.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p4_s256.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p4",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p4_s320.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p4_s320.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p4",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p4_s384.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p4_s384.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p4",
+"lo": 448,
+"hi": 512,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p4_s448.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p4_s448.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p4",
+"lo": 512,
+"hi": 576,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p4_s512.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p4_s512.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p4",
+"lo": 576,
+"hi": 640,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p4_s576.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p4_s576.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p4",
+"lo": 640,
+"hi": 704,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p4_s640.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p4_s640.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p4",
+"lo": 704,
+"hi": 768,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p4_s704.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p4_s704.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p4",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p4",
+"lo": 768,
+"hi": 813,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p4_s768.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p4_s768.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 0,
+"hi": 64,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s0.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s0.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 64,
+"hi": 128,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s64.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s64.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 128,
+"hi": 192,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s128.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s128.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 192,
+"hi": 256,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s192.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s192.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 256,
+"hi": 320,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s256.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s256.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 320,
+"hi": 384,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s320.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s320.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 384,
+"hi": 448,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s384.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s384.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 448,
+"hi": 512,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s448.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s448.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 512,
+"hi": 576,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s512.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s512.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 576,
+"hi": 640,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s576.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s576.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 640,
+"hi": 704,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s640.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s640.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 704,
+"hi": 768,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s704.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s704.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 768,
+"hi": 832,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s768.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s768.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 832,
+"hi": 896,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s832.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s832.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 896,
+"hi": 960,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s896.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s896.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 960,
+"hi": 1024,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s960.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s960.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 1024,
+"hi": 1088,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s1024.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s1024.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 1088,
+"hi": 1152,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s1088.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s1088.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 1152,
+"hi": 1216,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s1152.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s1152.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 1216,
+"hi": 1280,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s1216.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s1216.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 4096,
+"hi": 4160,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s4096.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s4096.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 8192,
+"hi": 8256,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s8192.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s8192.json"
+}
+],
+[
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 12288,
+"hi": 12352,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s12288.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s12288.json"
+},
+{
+"tag": "hardcode_test_cases_transcripts_redteam_kto_p5",
+"cell": "hardcode_test_cases|transcripts|redteam_kto",
+"pidx": "p5",
+"lo": 16448,
+"hi": 16467,
+"file": "hardcode_test_cases_transcripts_redteam_kto_p5_s16448.txt",
+"out": "hardcode_test_cases_transcripts_redteam_kto_p5_s16448.json"
+}
+]
+]
