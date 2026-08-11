@@ -780,6 +780,14 @@ function setCond(cond){
 (async function init(){
   const m = await (await fetch(DATA_BASE + 'manifest.json')).json();
   state.manifest = m;
+  // display order: strongest/cleanest quirk story first, most-debatable last
+  // (frontend-controlled so it's independent of the manifest's array order)
+  const BEH_ORDER = ['hardcode_test_cases','contextual_optimism','emotional_bond',
+    'flattery','hallucinates_citations','defer_to_users','reward_wireheading',
+    'secret_loyalty','increasing_pep','defend_objects','self_promotion',
+    'anti_ai_regulation','animal_welfare','ai_welfare_poisoning'];
+  const ord = b => { const i = BEH_ORDER.indexOf(b.behavior); return i < 0 ? 99 : i; };
+  m.behaviors.sort((a, b) => ord(a) - ord(b));
   $('beh-select').innerHTML = m.behaviors.map(b =>
     `<option value="${b.behavior}">${b.behavior.replace(/_/g,' ')}</option>`).join('');
   $('beh-select').onchange = e =>
