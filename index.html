@@ -40,10 +40,11 @@ header { padding: 26px 22px 12px; text-align: center; position: relative; }
 h1 { font-size: 24px; margin: 0 0 10px; }
 h1 .sub { color: var(--ink-2); font-weight: 400; }
 .cell-card .lbl { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; display: block; margin-bottom: 3px; }
-.quirk-text { font-size: 16px; color: var(--ink); font-weight: 600; }
+.quirk-text { font-size: 16px; color: var(--ink); font-weight: 600; text-align: center; margin-bottom: 18px; }
+.cell-card .lbl { text-align: center; }
 .cell-card .org { color: var(--ink); font-size: 14.5px; margin-top: 8px; font-weight: 500; }
 .cc-pick { font-weight: 700; font-size: 15.5px; color: var(--ink); margin: 14px 0 8px; }
-.cond-toggle { display: flex; gap: 8px; margin-bottom: 10px; }
+.cond-toggle { display: flex; gap: 8px; margin-bottom: 10px; justify-content: center; }
 .cpill {
   border: 1px solid var(--border); background: var(--page); color: var(--ink-2);
   border-radius: 8px; padding: 5px 14px; font-size: 13.5px; cursor: pointer; font-weight: 600;
@@ -244,12 +245,12 @@ footer a { color: var(--accent); }
     <table class="cc-table" id="cell-table"></table>
   </div>
   <div class="prompt-pills" id="pills"></div>
-  <div class="pills-hint"><span id="pills-hint-count">6 quirk-eliciting (domain) prompts</span> per organism · <span style="color:var(--sketchy)">★</span> = an NLA read on this prompt surfaces the quirk · <span style="color:var(--accent)">◆</span> = this prompt's J-lens readout surfaces the quirk · <span style="color:var(--notef)">◉</span> = alignment-notable non-quirk reads flagged</div>
+  <div class="pills-hint"><span style="color:var(--sketchy)">★</span> = an NLA read on this prompt surfaces the quirk · <span style="color:var(--accent)">◆</span> = this prompt's J-lens readout surfaces the quirk · <span style="color:var(--notef)">◉</span> = alignment-notable non-quirk reads flagged</div>
 </header>
 
 <main id="main" style="display:none">
   <section class="panel">
-    <h2>Prompt + Response <span class="hint">· click any token to read both instruments at that position · <span style="border-bottom:2px solid var(--sketchy)">orange underline</span> = NLA read flags the quirk there</span></h2>
+    <h2>Prompt + Response <span class="hint">· click any token to read both instruments at that position</span></h2>
     <div id="transcript" class="mono"></div>
     <div class="legend-row">
       <span class="key"><span class="swatch" style="background:var(--resp-bg);border:1px solid var(--grid-line)"></span> model response</span>
@@ -674,7 +675,7 @@ function renderCellTable(){
       const jlN = v.prompts.filter(p => p.orange).length;
       return `<td><button class="${cls.join(' ')}" data-cell="${c.cell}">
         NLA <span class="nla-v ${nlaN >= 1 ? 'g' : 'b'}">${nlaN}/${n}</span> · J-lens <span class="nla-v ${jlN >= 1 ? 'g' : 'b'}">${jlN}/${n}</span>
-        <span class="jl-v">prompts where the instrument surfaces the quirk</span></button></td>`;
+        </button></td>`;
     }).join('') + '</tr>';
   }
   $('cell-table').innerHTML = html;
@@ -691,9 +692,6 @@ async function loadCell(c, scrollToViz){
   const v = condView(c);
   $('pills').innerHTML = v.prompts.map(p =>
     `<button class="pill" data-pidx="${p.pidx}" title="${escHtml(p.prompt)}${p.nla_grade ? ' · ' + escHtml(p.nla_grade) : ''}">${escHtml(p.label || p.pidx)}${p.confound ? ' <span style="color:var(--muted)" title="sample test cases in the prompt: lookup is task-appropriate, excluded from scoring">⊘</span>' : ''}${p.caught ? ' <span class="star">★</span>' : ''}${p.orange ? ' <span class="jmark">◆</span>' : ''}${p.interesting ? ' <span style="color:var(--notef)">◉</span>' : ''}</button>`).join('');
-  $('pills-hint-count').textContent = v.generic
-    ? `${v.prompts.length} generic auditor prompts`
-    : `${v.prompts.length} quirk-eliciting (domain) prompts`;
   document.querySelectorAll('.pill').forEach(el => {
     el.onclick = () => { state.scrollToViz = true; loadPrompt(v.prompts.find(p => p.pidx === el.dataset.pidx)); };
   });
@@ -776,7 +774,6 @@ async function loadBehavior(b){
 function setCond(cond){
   state.cond = cond;
   document.querySelectorAll('.cpill').forEach(el => el.classList.toggle('active', el.dataset.cond === cond));
-  $('pills-hint-count').textContent = cond === 'generic' ? '15 generic auditor prompts' : '6 quirk-eliciting (domain) prompts';
   loadBehavior(state.behavior);
 }
 
