@@ -9,3 +9,8 @@ pipeline/grading_gp/raw/
 pipeline/grading_gp/backup/
 pipeline/grading_gp/segments/
 pipeline/grading_gp/results/
+pipeline/grading_gp/raw_haiku/
+pipeline/grading_gp/results_*.jsonl
+pipeline/grading_gp/batch_state.json
+pipeline/grading_gp/validation_report.txt
+pipeline/grading_gp/raw_opus/
