@@ -9,5 +9,6 @@ DATA = os.path.join(os.path.dirname(HERE), "data")
 
 api = HfApi()
 api.create_repo(REPO, repo_type="dataset", exist_ok=True)
-api.upload_large_folder(repo_id=REPO, repo_type="dataset", folder_path=DATA)
+api.upload_large_folder(repo_id=REPO, repo_type="dataset", folder_path=DATA,
+                        allow_patterns=["*.json.gz", "manifest.json"])
 print("uploaded", DATA, "->", REPO)
