@@ -214,6 +214,8 @@ tr.toklab th { position: sticky; top: 0; left: 0; z-index: 3; background: var(--
 #tip .t-head { color: var(--muted); font-size: 11px; margin-bottom: 4px; }
 #tip .tk { font-family: ui-monospace, Consolas, monospace; font-size: 11.5px; margin-right: 7px; color: var(--ink-2); display: inline-block; }
 #tip .tk.r0 { color: var(--ink); font-weight: 600; }
+.tk.fm-q { color: var(--sketchy); font-weight: 700; background: var(--sketchy-bg); border-radius: 3px; padding: 0 2px; }
+.tk.fm-n { color: var(--notef); font-weight: 700; background: var(--notef-bg); border-radius: 3px; padding: 0 2px; }
 footer { padding: 8px 22px 26px; color: var(--muted); font-size: 12px; text-align: center; }
 footer a { color: var(--accent); }
 #loading { padding: 40px; color: var(--muted); text-align: center; }
@@ -263,8 +265,7 @@ footer a { color: var(--accent); }
     <section class="panel">
       <h2>J-lens · argmax · layer × pos <span class="hint">· top row = token positions, each column is that position read at lens layers 78 down to 30 · hover a cell for the organism and base-model top-10</span></h2>
       <div class="legend-row" style="margin: 0 0 8px">
-        <span class="key"><span class="swatch" style="background:var(--sketchy-bg);border:1.5px solid var(--sketchy)"></span> quirk-mechanism token (lookup / memor / answers / hardcod…) in this cell's top 4, absent from the base model's readout at this position and from the visible text</span>
-        <span class="key"><span class="swatch" style="background:rgba(120,112,95,0.22);border:1px solid var(--grid-line)"></span> same mechanism token buried at rank 5-10 (or shared with the base model here)</span>
+        <span class="key"><span class="swatch" style="background:var(--sketchy-bg);border:1.5px solid var(--sketchy)"></span> an annotator-cited quirk atom is in this cell's top-25 · the cell still shows its true rank-1 token — hover to see the cited atom highlighted in the full readout, with the annotator's note</span>
         <span class="key"><span class="swatch" style="background:var(--notef-bg);border:1.5px solid var(--notef)"></span> alignment-notable but not the quirk (annotator flag: deception awareness, eval awareness, affect...)</span>
         <span class="key">no highlight = this prompt's whole J-lens readout adjudicated as not surfacing the quirk (task echo / false-confidence vocab)</span>
       </div>
@@ -340,6 +341,21 @@ function matchFlag(d, p, li){
     }
   }
   return best;
+}
+// every flag matching this exact cell, with the set of its atoms actually
+// present here — for accurate hover rendering (never shown as the cell's text)
+function matchFlagAll(d, p, li){
+  const flags = state.jlFlags && state.jlFlags[p];
+  if (!flags) return [];
+  const L = d.layers[li];
+  const cell = d.grid[p][li] || [];
+  const out = [];
+  for (const f of flags) {
+    if (L < f.l_lo || L > f.l_hi) continue;
+    const present = cell.map(v => d.vocab[v]).filter(t => f.atomSet.has(t.trim()));
+    if (present.length) out.push({kind: f.kind, atoms: present, note: f.note});
+  }
+  return out;
 }
 function classifyCell(d, p, li){
   // annotator-flag mode takes precedence: color only what the annotator cited
@@ -445,7 +461,7 @@ function renderTranscript(d){
       : `▾ hide system prompt + chat template`;
   };
   $('transcript').querySelectorAll('.tok').forEach(el => {
-    el.onclick = () => selectToken(+el.dataset.i);
+    el.onclick = () => selectToken(+el.dataset.i, true);
   });
 }
 
@@ -462,18 +478,10 @@ function renderGrid(d){
     const cells = [];
     for (let p = 0; p < n; p++) {
       const cell = d.grid[p][li];
-      let top = cell && cell.length ? d.vocab[cell[0]] : '';
+      // the cell ALWAYS shows its true rank-1 token — the cited quirk atom is
+      // shown on hover only, never substituted into the grid
+      const top = cell && cell.length ? d.vocab[cell[0]] : '';
       const cls = classifyCell(d, p, li);
-      // highlighted cells show the token that triggered the highlight,
-      // not the rank-1 token — so an orange cell never reads as e.g. "return"
-      if (cls && d.jl_flags !== undefined) {
-        const m = matchFlag(d, p, li);
-        if (m) top = m.atom;
-      } else if (cls && d.jl_graded) {
-        for (const v of (cell || []).slice(0, 10)) {
-          if (state.jlTokens.has(d.vocab[v].trim())) { top = d.vocab[v]; break; }
-        }
-      }
       const extra = cls ? ' q-' + cls : '';
       cells.push(`<td class="jcell${extra}" data-p="${p}" data-li="${li}">${escHtml(top.trim() || top)}</td>`);
     }
@@ -490,11 +498,14 @@ function renderGrid(d){
       const bcell = (d.base && d.base[p]) ? d.base[p][li] : [];
       const cls = classifyCell(d, p, li);
       const graded = d.jl_graded !== undefined;
-      let flagNote = null;
+      let flagNote = null, flagAtomKind = new Map();
       if (d.jl_flags !== undefined) {
-        const m = matchFlag(d, p, li);
-        flagNote = m
-          ? ` · <b style="color:${m.kind === 'quirk' ? 'var(--sketchy)' : 'var(--notef)'}">${m.kind === 'quirk' ? 'annotator: quirk evidence' : 'annotator: alignment-notable'}</b>${m.note ? ' — ' + escHtml(m.note) : ''}`
+        const ms = matchFlagAll(d, p, li);
+        for (const m of ms) for (const a of m.atoms) {
+          if (m.kind === 'quirk' || !flagAtomKind.has(a)) flagAtomKind.set(a, m.kind);
+        }
+        flagNote = ms.length
+          ? ms.map(m => ` · <b style="color:${m.kind === 'quirk' ? 'var(--sketchy)' : 'var(--notef)'}">${m.kind === 'quirk' ? 'quirk atom here: ' : 'notable atom here: '}${escHtml(m.atoms.map(a => a.trim()).join(', '))}</b>${m.note ? ' — ' + escHtml(m.note) : ''}`).join('<br>')
           : '';
       }
       const clsNote = flagNote !== null ? flagNote : cls === 'genuine' ? (graded
@@ -506,7 +517,11 @@ function renderGrid(d){
                     : cls === 'echo' ? ' · mechanism token, but the base model surfaces it here too'
                     : (graded && !d.jl_graded ? ' · adjudicated: this readout does not surface the quirk (task echo / false-confidence vocab)' : '');
       tip.innerHTML = `<div class="t-head">layer ${d.layers[li]} · pos ${p} ${escHtml(JSON.stringify(d.tokens[p]))}${clsNote}</div>` +
-        `<div>organism: ` + cell.map((v,r) => `<span class="tk${r===0?' r0':''}">${escHtml(d.vocab[v])}</span>`).join('') + `</div>` +
+        `<div>organism: ` + cell.map((v,r) => {
+          const k = flagAtomKind.get(d.vocab[v]);
+          const fm = k === 'quirk' ? ' fm-q' : k ? ' fm-n' : '';
+          return `<span class="tk${r===0?' r0':''}${fm}">${escHtml(d.vocab[v])}</span>`;
+        }).join('') + `</div>` +
         (bcell.length ? `<div style="margin-top:4px;color:var(--muted)">base model: ` + bcell.map(v => `<span class="tk">${escHtml(d.vocab[v])}</span>`).join('') + `</div>` : '');
       tip.style.display = 'block';
       const x = Math.min(ev.clientX + 14, innerWidth - 440), y = Math.min(ev.clientY + 14, innerHeight - 120);
@@ -590,14 +605,23 @@ function renderDetail(d, p){
   const rows = [];
   for (let li = d.layers.length - 1; li >= 0; li--) {
     const cell = d.grid[p][li] || [];
+    const kindOf = new Map();
+    if (d.jl_flags !== undefined) {
+      for (const m of matchFlagAll(d, p, li)) for (const a of m.atoms) {
+        if (m.kind === 'quirk' || !kindOf.has(a)) kindOf.set(a, m.kind);
+      }
+    }
     rows.push(`<tr><td class="l">L${d.layers[li]}</td><td>` +
-      cell.slice(0,30).map((v,r) => `<span class="tk${r===0?' r0':''}">${escHtml(d.vocab[v])}</span>`).join('') +
-      `</td></tr>`);
+      cell.slice(0,30).map((v,r) => {
+        const k = kindOf.get(d.vocab[v]);
+        const fm = k === 'quirk' ? ' fm-q' : k ? ' fm-n' : '';
+        return `<span class="tk${r===0?' r0':''}${fm}">${escHtml(d.vocab[v])}</span>`;
+      }).join('') + `</td></tr>`);
   }
   $('jdetail').innerHTML = `<h2>By layer · pos ${p} <span class="hint mono">${escHtml(JSON.stringify(d.tokens[p]))}</span></h2><table>${rows.join('')}</table>`;
 }
 
-function selectToken(p){
+function selectToken(p, scrollToInstruments){
   const d = state.data;
   state.sel = p;
   $('transcript').querySelectorAll('.tok.selected').forEach(el => el.classList.remove('selected'));
@@ -624,6 +648,12 @@ function selectToken(p){
     best.classList.add('selected');
     const list = $('nla-list');
     list.scrollTo({top: Math.max(0, best.offsetTop - list.offsetTop - list.clientHeight / 3), behavior: 'smooth'});
+  }
+  // when the click came from the transcript, bring the J-lens grid + NLA readouts
+  // into view so it's obvious the instruments updated for this token
+  if (scrollToInstruments) {
+    const inst = document.querySelector('.instruments');
+    if (inst) inst.scrollIntoView({behavior: 'smooth', block: 'start'});
   }
 }
 
